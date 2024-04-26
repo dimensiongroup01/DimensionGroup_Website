@@ -1,0 +1,43 @@
+.fd-table {
+    margin: 24px;
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.inner-table-div {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#fd-interest-rate-table {
+    margin: 12px;
+    padding: 12px;
+    position: relative;
+    left: 0;
+    border-collapse: collapse;
+    text-indent: 0;
+    width: 1200px;
+}
+
+tr>th,
+tr>td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px;
+}
+
+tr>th {
+    font-weight: bold;
+}
+
+tr>td:first-child {
+    min-width: 120px;
+    font-weight: bold;
+}
+
+td>button {
+    font-weight: bold;
+    color: white;
+    background-color: #379BD6;
+}
