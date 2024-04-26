@@ -33,6 +33,7 @@ tr>th {
 
 tr>td:first-child {
     min-width: 120px;
+    max-width: 220px;
     font-weight: bold;
 }
 
@@ -40,4 +41,11 @@ td>button {
     font-weight: bold;
     color: white;
     background-color: #379BD6;
+}
+
+td>a>div{
+    background-color: #379BD6;
+    color: white;
+    font-weight: bold;
+    padding: 2px;
 }
