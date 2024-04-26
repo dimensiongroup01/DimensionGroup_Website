@@ -1923,7 +1923,7 @@
                         <th rowspan="2">Name</th>
                         <th colspan="8">Cumulative</th>
                         <th colspan="8">Non Cumulative</th>
-                        <th rowspan="2">Download</th>
+                        <th rowspan="2">FD Forms</th>
                       </tr>
                       <tr>
                         <th>12M</th>
@@ -2049,8 +2049,8 @@
                   </table>
                 </div>
               </div>
-
-              <div class="vc_row wpb_row vc_row-fluid">
+              <!-- old FD form view -->
+              <!-- <div class="vc_row wpb_row vc_row-fluid">
                 <div class="container">
                   <div class="wpb_column vc_column_container vc_col-sm-12">
                     <div class="vc_column-inner">
@@ -2147,6 +2147,36 @@
                       </div>
                     </div>
                   </div>
+                </div>
+              </div> -->
+              <!-- code for interest calculator -->
+              <div class="calc-container">
+                <div class="calculator">
+                  <h2>Interest Calculator</h2>
+                  <label for="principal">Original Amount:</label>
+                  <input type="number" id="principal" placeholder="Enter original amount" min="5000" max="1000000">
+                  <!-- Set minimum limit to 5000 and maximum limit to 1,000,000 -->
+                  <input type="range" id="slider" min="5000" max="1000000" step="1000" value="5000">
+                  <!-- Set minimum limit to 5000 and maximum limit to 1,000,000 -->
+                  <label for="time">Number of Months:</label>
+                  <select id="time">
+                    <option value="12">12 months</option>
+                    <option value="18">18 months</option>
+                    <option value="24">24 months</option>
+                    <option value="30">30 months</option>
+                    <option value="36">36 months</option>
+                    <option value="42">42 months</option>
+                    <option value="48">48 months</option>
+                  </select>
+                  <label for="bank">Bank or Company:</label>
+                  <select id="bank">
+                    <option value="PNB">PNB</option>
+                    <option value="Bajaj">Bajaj</option>
+                    <option value="LIC">LIC</option>
+                    <!-- Add more options as needed -->
+                  </select>
+                  <button id="calc-interest" onclick="calculateInterest()">Calculate</button>
+                  <div id="result"></div>
                 </div>
               </div>
             </article>
