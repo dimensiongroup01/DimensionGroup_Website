@@ -1,3 +1,132 @@
+let rateData = {
+  bajaj: {
+    cumulative: {
+      1: 8.4,
+      2: 8.5,
+      3: 8.8,
+      4: 8.9,
+      5: 8.65,
+      6: 8.98,
+      7: 8.52,
+      8: 8.21,
+    },
+    nonCumulative: {
+      1: 7.65,
+      2: 7.98,
+      3: 7.52,
+      4: 7.21,
+      5: 7.65,
+      6: 7.98,
+      7: 7.52,
+      8: 7.21,
+    },
+  },
+  pnb: {
+    cumulative: {
+      1: 6.4,
+      2: 6.5,
+      3: 6.8,
+      4: 6.9,
+      5: 6.65,
+      6: 6.98,
+      7: 6.52,
+      8: 6.21,
+    },
+    nonCumulative: {
+      1: 5.4,
+      2: 5.4,
+      3: 5.4,
+      4: 5.4,
+      5: 5.65,
+      6: 5.98,
+      7: 5.52,
+      8: 5.21,
+    },
+  },
+  lic: {
+    cumulative: {
+      1: 4.4,
+      2: 4.5,
+      3: 4.8,
+      4: 4.9,
+      5: 4.65,
+      6: 4.98,
+      7: 4.52,
+      8: 4.21,
+    },
+    nonCumulative: {
+      1: 5.4,
+      2: 5.4,
+      3: 5.4,
+      4: 5.4,
+      5: 5.65,
+      6: 5.98,
+      7: 5.52,
+      8: 5.21,
+    },
+  },
+  shriram: {
+    cumulative: {
+      1: 6.4,
+      2: 6.5,
+      3: 6.8,
+      4: 6.9,
+      5: 6.65,
+      6: 6.98,
+      7: 6.52,
+      8: 6.21,
+    },
+    nonCumulative: {
+      1: 8.4,
+      2: 8.5,
+      3: 8.8,
+      4: 8.9,
+      5: 8.65,
+      6: 8.98,
+      7: 8.52,
+      8: 8.21,
+    },
+  },
+};
+
+let type = "Cumulative";
+let objectName = Object.keys(rateData)[0];
+
+function updateTable(type, rateData) {
+  // console.log(type);
+  // Get the row element
+  let timeline = document.getElementById("timeline");
+  timeline.innerText = "Timeline  " + `(${type})`;
+  for (const [company, companyData] of Object.entries(rateData)) {
+    let cumulativeRates = companyData.cumulative;
+    let nonCumulativeRates = companyData.nonCumulative;
+    let row = document.getElementById(`${company}-rates`);
+    let cells = row.getElementsByTagName("td");
+
+    for (let i = 1; i < cells.length - 1; i++) {
+      // Updatting the text content of each cell with the corresponding rate
+      let rate =
+        type === "Cumulative" ? cumulativeRates[i] : nonCumulativeRates[i];
+      cells[i].textContent = rate !== undefined ? rate : "-";
+    }
+  }
+}
+
+// Call the function with the sample JSON data
+updateTable(type, rateData);
+document
+  .getElementById("cumulative-button")
+  .addEventListener("click", function () {
+    updateTable("Cumulative", rateData);
+  });
+
+document
+  .getElementById("nonCumulative-button")
+  .addEventListener("click", function () {
+    updateTable("NonCumulative", rateData);
+  });
+
+// Initial call and event listener setup remain the same.
 function initializeCalculator() {
   let principalInput = document.getElementById("principal");
   let slider = document.getElementById("slider");
@@ -19,6 +148,8 @@ function initializeCalculator() {
 }
 
 let interestValue, principal, totalAmount;
+let interestPieChart; // Declare interestPieChart outside the function to access it globally
+
 // Function to calculate interest
 function calculateInterest() {
   // Get input values
@@ -42,10 +173,16 @@ function calculateInterest() {
   let interestRate = getInterestRate(bank, time);
   let interest = (principal * interestRate * (time / 12)) / 100;
   interestValue = parseFloat(interest.toFixed(2));
+
   // Display result
   let resultDiv = document.getElementById("result");
   totalAmount = principal + interestValue;
   resultDiv.innerHTML = `Total amount: ${totalAmount.toFixed(2)}`;
+  console.log(principal);
+  clearCanvas();
+
+  // Update the pie chart with the new values
+  createPieChart(principal, interestValue);
 }
 
 // Function to get interest rate based on bank and time
@@ -76,9 +213,15 @@ slider.addEventListener("input", calculateInterest);
 calButton.addEventListener("click", calculateInterest);
 
 function createPieChart(principal, interestValue) {
-  // console.log(principal, interestValue);
-  let ctx = document.getElementById("pieChart").getContext("2d");
-  let interestPieChart = new Chart(ctx, {
+  // Check if interestPieChart exists and destroy it
+  if (interestPieChart) {
+    interestPieChart.destroy();
+  }
+  // Get the canvas element
+  const ctx = document.getElementById("pieChart").getContext("2d");
+
+  // Create the new Chart instance
+  interestPieChart = new Chart(ctx, {
     type: "pie",
     data: {
       labels: ["Principal", "Interest"],
@@ -101,4 +244,9 @@ function createPieChart(principal, interestValue) {
     },
   });
 }
-export { interestValue, principal, totalAmount };
+
+function clearCanvas() {
+  let canvas = document.getElementById("pieChart");
+  let context = canvas.getContext("2d");
+  context.clearRect(0, 0, canvas.width, canvas.height);
+}
