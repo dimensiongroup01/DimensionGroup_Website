@@ -20,13 +20,81 @@
 	<!-- Start Chatbot -->
 	<script>
 		window.embeddedChatbotConfig = {
-		  chatbotId: "yaQXWQHvR_m1ggXBNUl_t",
-		  domain: "www.chatbase.co"
+			chatbotId: "OHQ3UwlUN-YjWWEbHxy4i",
+			domain: "www.chatbase.co"
 		}
-	  </script>
-	  <script src="https://www.chatbase.co/embed.min.js" chatbotId="yaQXWQHvR_m1ggXBNUl_t" domain="www.chatbase.co" defer>
-	  </script>
-	  <!-- End Chatbot -->
+	</script>
+	<script src="https://www.chatbase.co/embed.min.js" chatbotId="OHQ3UwlUN-YjWWEbHxy4i" domain="www.chatbase.co" defer>
+	</script>
+	<!-- End Chatbot -->
+
+	<!-- Whatsapp Start Here -->
+	<style>
+		.whatsapp_main {
+			position: fixed;
+			bottom: 12px;
+			z-index: 10;
+			height: 51px;
+		}
+
+		.whatsapp_container {
+			position: relative;
+			display: inline-block;
+			/* container ko align karne ke liye */
+		}
+
+		.whatsapp_img {
+			width: 14%;
+			/* Desktop view ke liye width set kiya hai */
+			position: relative;
+			z-index: 2;
+			/* Image ko front mein rakhne ke liye */
+		}
+
+		.whatsapp_effect {
+			margin-left: 24px;
+			border-radius: 50px;
+			position: absolute;
+			top: 0;
+			left: 10;
+			width: 43px;
+			height: 100%;
+			z-index: 1;
+			/* Effect ko image ke peeche rakhne ke liye */
+			animation: glowing 1300ms infinite;
+		}
+
+		@keyframes glowing {
+			0% {
+				box-shadow: 0 0 5px darkgreen;
+			}
+
+			50% {
+				box-shadow: 0 0 50px darkgreen;
+			}
+
+			100% {
+				box-shadow: 0 0 5px darkgreen;
+			}
+		}
+
+		@media only screen and (max-width:600px) {
+			.whatsapp_img {
+				width: 24%;
+				/* Mobile devices ke liye width */
+			}
+		}
+	</style>
+
+	<div class="whatsapp_main">
+		<a href="https://wa.me/919650799561" target="_blank">
+			<div class="whatsapp_container">
+				<img src="wp-content/uploads/2019/04/Whatsapp-image.png" class="whatsapp_img">
+				<div class="whatsapp_effect"></div> <!-- ye new div hai jo effect ke liye hai -->
+			</div>
+		</a>
+	</div>
+	<!-- Whatsapp End Here -->
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="https://www.dimensiongroup.co.in/xmlrpc.php">
@@ -1496,22 +1564,26 @@
 															class="menu-item menu-item-type-post_type menu-item-object-page menu-default menu-item-lv0">
 															<a href="index.html@p=2.html"
 																class="menu-item-link icon-left"><span
-																	class="menu_title">About Us</span></a></li>
+																	class="menu_title">About Us</span></a>
+														</li>
 														<li
 															class="menu-item menu-item-type-post_type menu-item-object-page menu-default menu-item-lv0">
 															<a href="index.html@p=162.html"
 																class="menu-item-link icon-left"><span
-																	class="menu_title">Gallery</span></a></li>
+																	class="menu_title">Gallery</span></a>
+														</li>
 														<li
 															class="menu-item menu-item-type-post_type menu-item-object-page menu-default menu-item-lv0">
 															<a href="index.html@p=343.html"
 																class="menu-item-link icon-left"><span
-																	class="menu_title">Careers</span></a></li>
+																	class="menu_title">Careers</span></a>
+														</li>
 														<li
 															class="menu-item menu-item-type-post_type menu-item-object-page menu-default menu-item-lv0">
 															<a href="index.html@p=19.html"
 																class="menu-item-link icon-left"><span
-																	class="menu_title">Contact Us</span></a></li>
+																	class="menu_title">Contact Us</span></a>
+														</li>
 													</ul>
 												</div>
 											</div>
@@ -1526,19 +1598,16 @@
 							<div class="clear hb-section section-2">
 								<div class="container clear">
 									<div class="element-item hb-logo hb-s2i1 image-type">
-										<div class="content-logo"><a href="index.html"><img width="200" height="10"
-													class="logo-origin logo-retina-hide"
-													src="wp-content/uploads/2019/05/dimesnion-logo-s.png"
-													alt="Dimension Group" /><img width="180" height="10"
-													class="logo-sticky logo-retina-hide"
-													src="wp-content/uploads/2019/05/dimesnion-logo-s.png"
-													alt="Dimension Group" /><img width="200" height="10"
-													class="logo-origin logo-retina-show"
-													src="wp-content/uploads/2019/05/dimesnion-logo-s.png"
-													alt="Dimension Group" /><img width="180" height="10"
-													class="logo-sticky logo-retina-show"
-													src="wp-content/uploads/2019/05/dimesnion-logo-s.png"
-													alt="Dimension Group" /></a></div>
+										<div class="content-logo">
+											<a href="index.html" style="margin-left: 90px;"><img width="200" height="10" class="logo-origin logo-retina-hide"
+												src="wp-content/uploads/2019/05/dimesnion-logo-s.png" alt="Dimension Group" /><img width="180"
+												height="10" class="logo-sticky logo-retina-hide"
+												src="wp-content/uploads/2019/05/dimesnion-logo-s.png" alt="Dimension Group" /><img width="200"
+												height="10" class="logo-origin logo-retina-show"
+												src="wp-content/uploads/2019/05/dimesnion-logo-s.png" alt="Dimension Group" /><img width="180"
+												height="10" class="logo-sticky logo-retina-show"
+												src="wp-content/uploads/2019/05/dimesnion-logo-s.png" alt="Dimension Group" /></a>
+										  </div>
 									</div>
 									<div class="element-item hb-flex"></div>
 									<div class="element-item hb-menu hb-s2i3 text-layout" data-animation="scale"
@@ -1554,12 +1623,14 @@
 																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-default menu-item-lv0">
 																<a href="index.html"
 																	class="menu-item-link icon-left"><span
-																		class="menu_title">Home</span></a></li>
+																		class="menu_title">Home</span></a>
+															</li>
 															<li
 																class="menu-item menu-item-type-post_type menu-item-object-page menu-default menu-item-lv0">
 																<a href="index.html@p=158.html"
 																	class="menu-item-link icon-left"><span
-																		class="menu_title">Services</span></a></li>
+																		class="menu_title">Services</span></a>
+															</li>
 															<li
 																class="menu-item menu-item-type-post_type menu-item-object-page menu-default menu-item-lv0">
 																<a href="index.html@p=388.html"
@@ -1576,7 +1647,8 @@
 																class="menu-item menu-item-type-post_type menu-item-object-page menu-default menu-item-lv0">
 																<a href="index.html@p=829.html"
 																	class="menu-item-link icon-left"><span
-																		class="menu_title">Mutual Funds</span></a></li>
+																		class="menu_title">Mutual Funds</span></a>
+															</li>
 															<li
 																class="menu-item menu-item-type-post_type menu-item-object-page menu-default menu-item-lv0">
 																<a href="index.html@p=380.html"
@@ -1614,7 +1686,8 @@
 																class="menu-item menu-item-type-custom menu-item-object-custom menu-default menu-item-lv0">
 																<a target="_blank" href="https://camskra.com/"
 																	class="menu-item-link icon-left"><span
-																		class="menu_title">Check KYC</span></a></li>
+																		class="menu_title">Check KYC</span></a>
+															</li>
 														</ul>
 													</div>
 												</div>
@@ -1675,7 +1748,8 @@
 															make your own business decisions, where your clients benefit
 															and you get to focus on what you enjoy? Becoming
 															<strong>Dimension Group&#8217;s</strong> Business Partner
-															can bring you a NEW LEVEL OF FREEDOM.</p>
+															can bring you a NEW LEVEL OF FREEDOM.
+														</p>
 
 													</div>
 												</div>
@@ -1876,7 +1950,8 @@
 																					required><label
 																					for="wpforms-1251-field_6-state"
 																					class="wpforms-field-sublabel after ">State
-																					/ Province / Region</label></div>
+																					/ Province / Region</label>
+																			</div>
 																		</div>
 																		<div
 																			class="wpforms-field-row wpforms-field-large">
@@ -1889,7 +1964,8 @@
 																					required><label
 																					for="wpforms-1251-field_6-postal"
 																					class="wpforms-field-sublabel after ">Postal
-																					Code</label></div>
+																					Code</label>
+																			</div>
 																			<div
 																				class="wpforms-field-row-block wpforms-one-half">
 																				<select
@@ -2681,16 +2757,20 @@
 										<ul id="menu-our-company" class="menu">
 											<li id="menu-item-571"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-571">
-												<a href="index.html">Home</a></li>
+												<a href="index.html">Home</a>
+											</li>
 											<li id="menu-item-570"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-570">
-												<a href="index.html@p=158.html">Services</a></li>
+												<a href="index.html@p=158.html">Services</a>
+											</li>
 											<li id="menu-item-398"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398">
-												<a href="index.html@p=2.html">About Us</a></li>
+												<a href="index.html@p=2.html">About Us</a>
+											</li>
 											<li id="menu-item-399"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399">
-												<a href="index.html@p=340.html">Group Companies</a></li>
+												<a href="index.html@p=340.html">Group Companies</a>
+											</li>
 										</ul>
 									</div>
 								</aside>
@@ -2702,16 +2782,20 @@
 										<ul id="menu-quick-links" class="menu">
 											<li id="menu-item-572"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-572">
-												<a href="index.html@p=388.html">Provident Fund</a></li>
+												<a href="index.html@p=388.html">Provident Fund</a>
+											</li>
 											<li id="menu-item-407"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-407">
-												<a href="index.html@p=334.html">Bonds/Debentures</a></li>
+												<a href="index.html@p=334.html">Bonds/Debentures</a>
+											</li>
 											<li id="menu-item-835"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-835">
-												<a href="index.html@p=829.html">Mutual Funds</a></li>
+												<a href="index.html@p=829.html">Mutual Funds</a>
+											</li>
 											<li id="menu-item-409"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-409">
-												<a href="index.html@p=380.html">Fixed Deposits</a></li>
+												<a href="index.html@p=380.html">Fixed Deposits</a>
+											</li>
 										</ul>
 									</div>
 								</aside>
@@ -2727,13 +2811,16 @@
 											</li>
 											<li id="menu-item-404"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-404">
-												<a href="index.html@p=19.html">Contact Us</a></li>
+												<a href="index.html@p=19.html">Contact Us</a>
+											</li>
 											<li id="menu-item-403"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-403">
-												<a href="index.html@p=343.html">Careers</a></li>
+												<a href="index.html@p=343.html">Careers</a>
+											</li>
 											<li id="menu-item-405"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-405">
-												<a href="index.html@p=162.html">Gallery</a></li>
+												<a href="index.html@p=162.html">Gallery</a>
+											</li>
 										</ul>
 									</div>
 								</aside>
@@ -2762,8 +2849,9 @@
 
 				<div class="bot">
 					<div class="info">
-						©2019 Dimension Group | Made with ♥ by <a href="https://www.vibgyorweblabs.com/"
-							target="_blank">Vibgyor Weblabs</a> </div>
+						©2024 Dimension Group | Made with ♥ by
+						<a href="#" target="_blank">Inhouse Developers of Dimension</a>
+					</div>
 				</div>
 				<div id="wr-back-top">
 					<a href="javascript:void(0);" class="heading-color hover-bg-primary dib overlay_bg nitro-line"
