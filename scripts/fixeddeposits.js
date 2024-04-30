@@ -1,24 +1,24 @@
 let rateData = {
   bajaj: {
     cumulative: {
-      1: "",
+      1: 7.4,
       2: 7.4,
-      3: "",
+      3: 7.55,
       4: 7.45,
-      5: "",
-      6: "",
-      7: "",
-      8: "",
+      5: 8.05,
+      6: 8.05,
+      7: 8.05,
+      8: 8.05,
     },
     nonCumulative: {
-      1: "",
-      2: 7.27,
-      3: "",
-      4: 7.32,
-      5: "",
-      6: "",
-      7: "",
-      8: "",
+      1: 7.4,
+      2: 7.4,
+      3: 7.55,
+      4: 7.45,
+      5: 8.05,
+      6: 8.05,
+      7: 8.05,
+      8: 8.05,
     },
   },
   pnb: {
@@ -152,11 +152,12 @@ let interestPieChart; // Declare interestPieChart outside the function to access
 
 // Function to calculate interest
 function calculateInterest() {
+  numberOfMonth.innerHTML = "Number of Months: " + ` ${sliderMonth.value}`;
+
   // Get input values
   principal = parseFloat(document.getElementById("principal").value);
   let time = parseInt(document.getElementById("time").value);
   let bank = document.getElementById("bank").value;
-
   // Validate input against maximum limit
   let maxLimit = parseFloat(
     document.getElementById("principal").getAttribute("max")
@@ -168,16 +169,18 @@ function calculateInterest() {
     alert("Amount not in valid limit");
     return;
   }
-
+  console.log(getInterestRate("PNB", 60));
   // Calculate interest
   let interestRate = getInterestRate(bank, time);
+  console.log(interestRate);
+
   let interest = (principal * interestRate * (time / 12)) / 100;
+  console.log(interest, principal, interestRate);
 
   // Display result
   let resultDiv = document.getElementById("result");
   totalAmount = principal + interest;
   resultDiv.innerHTML = `Total amount: ${totalAmount.toFixed(2)}`;
-  console.log(interest);
   clearCanvas();
   // Update the pie chart with the new values
   createPieChart(principal, interest);
@@ -187,9 +190,51 @@ function calculateInterest() {
 function getInterestRate(bank, time) {
   // Define interest rates for different banks and time periods
   let rates = {
-    PNB: { 12: 7.85, 18: 7.7, 24: 7.5, 30: 7.9, 36: 7.5, 42: 8, 48: 8.5 },
-    Bajaj: { 12: 6.85, 18: 9.7, 24: 8.5, 30: 8.9, 36: 7.5, 42: 8, 48: 8.5 },
-    LIC: { 12: 7.5, 18: 7, 24: 715, 30: 8.5, 36: 8.5, 42: 8.1, 48: 8.5 },
+    PNB: {
+      12: 7.75,
+      18: 7.75,
+      24: 7.75,
+      30: 7.75,
+      36: 7.95,
+      42: 7.95,
+      48: 7.8,
+      54: 7.8,
+      60: 7.8,
+    },
+
+    Bajaj: {
+      12: 7.4,
+      18: 7.4,
+      24: 7.55,
+      30: 7.45,
+      36: 8.05,
+      42: 8.05,
+      48: 8.05,
+      54: 8.05,
+      60: 8.05,
+    },
+    LIC: {
+      12: 7.25,
+      18: 7.35,
+      24: 7.6,
+      30: 7.6,
+      36: 7.75,
+      42: 7.75,
+      48: 7.75,
+      54: 7.75,
+      60: 7.75,
+    },
+    Shriram: {
+      12: 7.85,
+      18: 8.0,
+      24: 8.15,
+      30: 8.35,
+      36: 8.7,
+      42: 8.75,
+      48: 8.75,
+      54: 8.75,
+      60: 8.8,
+    },
     // Add more banks and their rates as needed
   };
 
@@ -201,15 +246,16 @@ initializeCalculator();
 let principalInput = document.getElementById("principal");
 let slider = document.getElementById("slider");
 let calButton = document.getElementById("calc-interest");
-
+let sliderMonth = document.getElementById("time");
+let numberOfMonth = document.getElementById("numberOfMonth");
 // default calculator
 calculateInterest();
 
 // listen input change
 principalInput.addEventListener("input", calculateInterest);
-slider.addEventListener("input", calculateInterest);
+slider.addEventListener("mouseleave", calculateInterest);
 calButton.addEventListener("click", calculateInterest);
-
+sliderMonth.addEventListener("mouseleave", calculateInterest);
 function createPieChart(principal, interest) {
   const ctx = document.getElementById("pieChart").getContext("2d");
   // Destroy existing chart if it exists
