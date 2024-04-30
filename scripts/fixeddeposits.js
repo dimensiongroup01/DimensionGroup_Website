@@ -169,13 +169,10 @@ function calculateInterest() {
     alert("Amount not in valid limit");
     return;
   }
-  console.log(getInterestRate("PNB", 60));
   // Calculate interest
   let interestRate = getInterestRate(bank, time);
-  console.log(interestRate);
 
   let interest = (principal * interestRate * (time / 12)) / 100;
-  console.log(interest, principal, interestRate);
 
   // Display result
   let resultDiv = document.getElementById("result");
