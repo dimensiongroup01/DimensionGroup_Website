@@ -10,16 +10,106 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Animation Css Start -->
+
+  <style>
+    .mk {
+      transition: transform 0.3s ease-in-out;
+      /* Smooth transition for transform property */
+    }
+
+    .mk:hover {
+      transform: translateY(-10px);
+      /* Moves the element up by 10 pixels when hovered */
+    }
+    .logo-main{
+      height: 72px;
+      width: auto;
+    }
+  </style>
+
+
+  <!-- Animation Css End -->
+
   <!-- Start Chatbot -->
   <script>
     window.embeddedChatbotConfig = {
-      chatbotId: "yaQXWQHvR_m1ggXBNUl_t",
+      chatbotId: "OHQ3UwlUN-YjWWEbHxy4i",
       domain: "www.chatbase.co"
     }
   </script>
-  <script src="https://www.chatbase.co/embed.min.js" chatbotId="yaQXWQHvR_m1ggXBNUl_t" domain="www.chatbase.co" defer>
+  <script src="https://www.chatbase.co/embed.min.js" chatbotId="OHQ3UwlUN-YjWWEbHxy4i" domain="www.chatbase.co" defer>
   </script>
   <!-- End Chatbot -->
+
+  <!-- Whatsapp Start Here -->
+  <style>
+    .whatsapp_main {
+      position: fixed;
+      bottom: 91px;
+      z-index: 10;
+      height: 51px;
+      right: -582px;
+    }
+
+    .whatsapp_container {
+      position: relative;
+      display: inline-block;
+      /* container ko align karne ke liye */
+    }
+
+    .whatsapp_img {
+      width: 14%;
+      /* Desktop view ke liye width set kiya hai */
+      position: relative;
+      z-index: 2;
+      /* Image ko front mein rakhne ke liye */
+    }
+
+    .whatsapp_effect {
+      margin-left: 24px;
+      border-radius: 50px;
+      position: absolute;
+      top: 0;
+      left: 10;
+      width: 43px;
+      height: 100%;
+      z-index: 1;
+      /* Effect ko image ke peeche rakhne ke liye */
+      animation: glowing 1300ms infinite;
+    }
+
+    @keyframes glowing {
+      0% {
+        box-shadow: 0 0 5px darkgreen;
+      }
+
+      50% {
+        box-shadow: 0 0 50px darkgreen;
+      }
+
+      100% {
+        box-shadow: 0 0 5px darkgreen;
+      }
+    }
+
+    @media only screen and (max-width:600px) {
+      .whatsapp_img {
+        width: 14%;
+        /* Mobile devices ke liye width */
+      }
+    }
+  </style>
+
+  <div class="whatsapp_main">
+    <a href="https://wa.me/919650799561" target="_blank">
+      <div class="whatsapp_container">
+        <img src="wp-content/uploads/2019/04/Whatsapp-image.png" class="whatsapp_img">
+        <div class="whatsapp_effect"></div> <!-- ye new div hai jo effect ke liye hai -->
+      </div>
+    </a>
+  </div>
+  <!-- Whatsapp End Here -->
 
 
   <!-- Bootstrap JavaScript Bundle with Popper -->
@@ -2065,7 +2155,7 @@
 
 <body
   class="home page-template-default page page-id-156 woocommerce-no-js unselectable mask wr-desktop vc-activated wpb-js-composer js-comp-ver-5.7 vc_responsive"
-  itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  itemscope="itemscope" itemtype="http://schema.org/WebPage" style="overflow: hidden;">
   <div class="wrapper-outer">
     <div class="wrapper">
       <div class="header-outer clear inherit" data-id="356" role="banner" itemscope="itemscope"
@@ -2136,7 +2226,7 @@
                 <div class="container clear">
                   <div class="element-item hb-logo hb-s2i1 image-type">
                     <div class="content-logo">
-                      <a href="index.html"><img width="200" height="10" class="logo-origin logo-retina-hide"
+                      <a href="index.html" style="margin-left: 50px;"><img width="200" height="10" class="logo-origin logo-retina-hide logo-main"
                           src="wp-content/uploads/2019/05/dimesnion-logo-s.png" alt="Dimension Group" /><img width="180"
                           height="10" class="logo-sticky logo-retina-hide"
                           src="wp-content/uploads/2019/05/dimesnion-logo-s.png" alt="Dimension Group" /><img width="200"
@@ -2268,6 +2358,13 @@
                           ">
                         <!-- START REVOLUTION SLIDER 5.4.8.3 auto mode -->
                         <!-- Bootstrap Carousel -->
+                        <style>
+                          .carousel-caption {
+                            bottom: 20%;
+                            
+                            transform: translateY(-50%);
+                          }
+                        </style>
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                           <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -2280,34 +2377,31 @@
                           <div class="carousel-inner">
                             <div class="carousel-item active">
                               <img
-                                src="wp-content/uploads/2019/04/financial-securities-and-debt-management-company-in-delhi.jpg"
+                                src="wp-content/uploads/2019/04/capital-debt-security-insurance-mutual-funds-fixed-deposits.jpg"
                                 class="d-block w-100" alt="Slide 1">
-                              <!-- <div class="carousel-caption d-none d-md-block">
-                                <h5>Discuss With Us</h5>
-                                <p>Surely You Will Love It</p>
-                                <a href="http://www.dimensiongroup.co.in/contact/" class="btn btn-primary">Get a
+                              <div class="carousel-caption d-none d-md-block" style="margin-left: -663px;">
+                                <h2 style="color: white;">Discuss With Us</h2>
+                                <h4 style="color: white;">Surely You Will Love It</h4>
+                                <a href="index.html@p=19.html" class="btn btn-primary" style="background-color: #379BD6;">Get a
                                   proposal now</a>
-                              </div> -->
+                              </div>
                             </div>
                             <div class="carousel-item">
                               <img
-                                src="wp-content/uploads/2019/04/capital-debt-security-insurance-mutual-funds-fixed-deposits.jpg"
+                                src="wp-content/uploads/2019/04/financial-securities-and-debt-management-company-in-delhi.jpg"
                                 class="d-block w-100" alt="Slide 2">
-                              <!-- <div class="carousel-caption d-none d-md-block">
-                                <h5>Mutual Funds</h5>
-                                <p>The smart way of growing wealth</p>
-                                <a href="http://www.dimensiongroup.co.in/contact/" class="btn btn-primary">Start Now</a>
-                              </div> -->
+                              <div class="carousel-caption d-none d-md-block" style="margin-left: -663px;">
+                                <h2 style="color: white;">Mutual Funds</h2>
+                                <h4 style="color: white;">The smart way of growing wealth</h4>
+                                <a href="index.html@p=19.html" class="btn btn-primary" style="background-color: #379BD6;">Start Now</a>
+                              </div>
                             </div>
                             <div class="carousel-item">
                               <img src="wp-content/uploads/2019/04/Financial-management-company.jpg"
                                 class="d-block w-100" alt="Slide 3">
-                              <!-- <div class="carousel-caption d-none d-md-block">
-                                <h5>Financial Management</h5>
-                                <p>Optimize your financial assets efficiently.</p>
-                                <a href="http://www.dimensiongroup.co.in/contact/" class="btn btn-primary">Learn
-                                  More</a>
-                              </div> -->
+                              <div class="carousel-caption d-none d-md-block">
+                                
+                              </div>
                             </div>
                           </div>
                           <button class="carousel-control-prev" type="button"
@@ -2335,118 +2429,127 @@
                       <div
                         class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1557352057013 vc_column-gap-30 vc_row-o-equal-height vc_row-o-content-top vc_row-flex">
                         <div class="wpb_column vc_column_container vc_col-sm-3 vc_col-has-fill">
-                          <div class="vc_column-inner vc_custom_1556313889338">
-                            <div class="wpb_wrapper">
-                              <div class="wpb_text_column wpb_content_element">
-                                <div class="wpb_wrapper">
-                                  <h1 style="
+                          <div class="mk" style="z-index: 2;">
+                            <div class="vc_column-inner vc_custom_1556313889338"
+                              style="border-radius: 15px 50px;cursor: pointer;">
+                              <div class="wpb_wrapper">
+                                <div class="wpb_text_column wpb_content_element">
+                                  <div class="wpb_wrapper">
+                                    <h1 style="
                                         text-align: center;
                                         margin: 10px 0;
                                         font-size: 26px;
                                         line-height: 26px;
                                       ">
-                                    <span style="color: #ffffff">Provident Fund</span>
-                                  </h1>
-                                  <p style="text-align: center">
-                                    <span style="color: #ffffff">A provident fund is a compulsory,
-                                      government-managed retirement savings on
-                                      behalf of their employees. The money in
-                                      the fund is then held and managed by the
-                                      government, and eventually withdrawn by
-                                      retirees.
-                                      <span style="text-decoration: underline"><a style="
+                                      <span style="color: #ffffff">Provident Fund</span>
+                                    </h1>
+                                    <p style="text-align: center">
+                                      <span style="color: #ffffff">A provident fund is a compulsory,
+                                        government-managed retirement savings on
+                                        behalf of their employees. The money in
+                                        the fund is then held and managed by the
+                                        government, and eventually withdrawn.<br>
+                                        <span style="text-decoration: underline"><a style="
                                               color: #ffffff;
                                               text-decoration: underline;
                                             " href="provident-fund/index.html">Read More&#8230;</a></span></span>
-                                  </p>
+                                    </p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div class="wpb_column vc_column_container vc_col-sm-3 vc_col-has-fill">
-                          <div class="vc_column-inner vc_custom_1556313334555">
-                            <div class="wpb_wrapper">
-                              <div class="wpb_text_column wpb_content_element">
-                                <div class="wpb_wrapper">
-                                  <h1 style="
+                          <div class="mk" style="z-index: 2;">
+                            <div class="vc_column-inner vc_custom_1556313334555"
+                              style="border-radius: 15px 50px;cursor: pointer;">
+                              <div class="wpb_wrapper">
+                                <div class="wpb_text_column wpb_content_element">
+                                  <div class="wpb_wrapper">
+                                    <h1 style="
                                         text-align: center;
                                         margin: 10px 0;
                                         font-size: 26px;
                                         line-height: 26px;
                                       ">
-                                    <span style="color: #333">Bonds</span>
-                                  </h1>
-                                  <p style="text-align: center">
-                                    <span style="color: #333">Governments (at all levels) and
-                                      corporations commonly use bonds in order
-                                      to borrow money. Governments need to
-                                      fund roads, schools, dams or other
-                                      infrastructure. The sudden expense of a
-                                      war may also demand the need to raise
-                                      funds.
-                                      <span style="text-decoration: underline"><a style="
+                                      <span style="color: #333">Bonds</span>
+                                    </h1>
+                                    <p style="text-align: center">
+                                      <span style="color: #333">Governments (at all levels) and
+                                        corporations commonly use bonds in order
+                                        to borrow money. Governments need to
+                                        fund roads, schools, dams or other
+                                        infrastructure. The sudden expense of a
+                                        war.<br>
+                                        <span style="text-decoration: underline"><a style="
                                               color: #333333;
                                               text-decoration: underline;
                                             " href="bonds-debenture/index.html">Read More&#8230;</a></span></span>
-                                  </p>
+                                    </p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div class="wpb_column vc_column_container vc_col-sm-3 vc_col-has-fill">
-                          <div class="vc_column-inner vc_custom_1556313908117">
-                            <div class="wpb_wrapper">
-                              <div class="wpb_text_column wpb_content_element">
-                                <div class="wpb_wrapper">
-                                  <h1 style="
+                          <div class="mk" style="z-index: 2;">
+                            <div class="vc_column-inner vc_custom_1556313908117"
+                              style="border-radius: 15px 50px;cursor: pointer;">
+                              <div class="wpb_wrapper">
+                                <div class="wpb_text_column wpb_content_element">
+                                  <div class="wpb_wrapper">
+                                    <h1 style="
                                         text-align: center;
                                         margin: 10px 0;
                                         font-size: 26px;
                                         line-height: 26px;
                                       ">
-                                    <span style="color: #ffffff">Mutual Funds</span>
-                                  </h1>
-                                  <p style="text-align: center">
-                                    <span style="color: #ffffff">A mutual fund is an entity that pools
-                                      the money of many investors, its
-                                      unit-holders, to invest in different
-                                      securities. Investments may be in
-                                      shares, debt securities, money market
-                                      securities or a combination of these.
-                                      <a style="color: #ffffff" href="mutual-fund/index.html"><span
-                                          style="text-decoration: underline">Read More&#8230;</span></a></span>
-                                  </p>
+                                      <span style="color: #ffffff">Mutual Funds</span>
+                                    </h1>
+                                    <p style="text-align: center">
+                                      <span style="color: #ffffff">A mutual fund is an entity that pools
+                                        the money of many investors, its
+                                        unit-holders, to invest in different
+                                        securities. Investments may be in
+                                        shares, debt securities, money market
+                                        securities or a combination of these.<br>
+                                        <a style="color: #ffffff" href="mutual-fund/index.html"><span
+                                            style="text-decoration: underline">Read More&#8230;</span></a></span>
+                                    </p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div class="wpb_column vc_column_container vc_col-sm-3 vc_col-has-fill">
-                          <div class="vc_column-inner vc_custom_1557258830586">
-                            <div class="wpb_wrapper">
-                              <div class="wpb_text_column wpb_content_element">
-                                <div class="wpb_wrapper">
-                                  <h1 style="
+                          <div class="mk" style="z-index: 2;">
+                            <div class="vc_column-inner vc_custom_1557258830586"
+                              style="border-radius: 15px 50px;cursor: pointer;">
+                              <div class="wpb_wrapper">
+                                <div class="wpb_text_column wpb_content_element">
+                                  <div class="wpb_wrapper">
+                                    <h1 style="
                                         text-align: center;
                                         margin: 10px 0;
                                         font-size: 26px;
                                         line-height: 26px;
                                       ">
-                                    <span style="color: #ffffff">Fixed Deposit</span>
-                                  </h1>
-                                  <p style="text-align: center">
-                                    <span style="color: #ffffff">Fixed deposits are one of India&#8217;s
-                                      favorite investment options, as they
-                                      give investors the assurance of fixed
-                                      returns, with high interest rates. We
-                                      offer only fixed deposits from leading
-                                      corporate houses.
-                                      <a style="color: #ffffff"
-                                        href="http://www.dimensiongroup.co.in/fixed-deposit/"><span
-                                          style="text-decoration: underline">Read More&#8230;</span></a></span>
-                                  </p>
+                                      <span style="color: #ffffff">Fixed Deposit</span>
+                                    </h1>
+                                    <p style="text-align: center">
+                                      <span style="color: #ffffff">Fixed deposits are one of India&#8217;s
+                                        favorite investment options, as they
+                                        give investors the assurance of fixed
+                                        returns, with high interest rates. We
+                                        offer only fixed<br> deposits from leading
+                                        corporate houses.<br>
+                                        <a style="color: #ffffff" href="fixed-deposits/index.html"><span
+                                            style="text-decoration: underline">Read More&#8230;</span></a></span>
+                                    </p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -3134,8 +3237,8 @@
 
         <div class="bot">
           <div class="info">
-            ©2019 Dimension Group | Made with ♥ by
-            <a href="https://www.vibgyorweblabs.com/" target="_blank">Vibgyor Weblabs</a>
+            ©2024 Dimension Group | Made with ♥ by
+            <a href="#" target="_blank">Inhouse Developers of Dimension</a>
           </div>
         </div>
         <div id="wr-back-top">
@@ -3442,4 +3545,5 @@
       }
     </script>
 </body>
+
 </html>
