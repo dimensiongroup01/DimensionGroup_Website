@@ -1946,7 +1946,7 @@
                         <th>24M</th>
                         <th>30M</th>
                         <th>36M</th>
-                        <th>44M</th>
+                        <th>42M</th>
                         <th>48M</th>
                         <th>60M</th>
                       </tr>
@@ -2137,10 +2137,14 @@
                     <input type="number" id="principal" placeholder="Enter original amount" min="5000" max="1000000"
                       value="5000">
                     <!-- Set minimum limit to 5000 and maximum limit to 1,000,000 -->
-                    <input type="range" id="slider" min="5000" max="1000000" step="1000" value="5000">
+                    <input type="range" class="input-slider" id="slider" min="5000" max="1000000" step="1000"
+                      value="5000">
                     <!-- Set minimum limit to 5000 and maximum limit to 1,000,000 -->
-                    <label for="time">Number of Months:</label>
-                    <select id="time">
+                    <label for="time" id="numberOfMonth"></label>
+                    <input type="range" class="input-slider" id="time" min="12" max="60" step="6" value="12">
+                    <!-- Set minimum limit to 5000 and maximum limit to 1,000,000 -->
+
+                    <!-- <select id="time">
                       <option value="12">12 months</option>
                       <option value="18">18 months</option>
                       <option value="24">24 months</option>
@@ -2148,12 +2152,13 @@
                       <option value="36">36 months</option>
                       <option value="42">42 months</option>
                       <option value="48">48 months</option>
-                    </select>
+                    </select> -->
                     <label for="bank">Bank or Company:</label>
                     <select id="bank">
                       <option value="PNB">PNB</option>
                       <option value="Bajaj">Bajaj</option>
                       <option value="LIC">LIC</option>
+                      <option value="Shriram">Shriram Transport</option>
                       <!-- Add more options as needed -->
                     </select>
                     <button id="calc-interest">Calculate</button>
