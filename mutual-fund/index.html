@@ -21,70 +21,16 @@
 	</script>
 	<!-- End Chatbot -->
 	<!-- Whatsapp Start Here -->
-	<style>
-		.whatsapp_main {
-			position: fixed;
-			bottom: 12px;
-			z-index: 10;
-			height: 51px;
-		}
-
-		.whatsapp_container {
-			position: relative;
-			display: inline-block;
-			/* container ko align karne ke liye */
-		}
-
-		.whatsapp_img {
-			width: 14%;
-			/* Desktop view ke liye width set kiya hai */
-			position: relative;
-			z-index: 2;
-			/* Image ko front mein rakhne ke liye */
-		}
-
-		.whatsapp_effect {
-			margin-left: 24px;
-			border-radius: 50px;
-			position: absolute;
-			top: 0;
-			left: 10;
-			width: 43px;
-			height: 100%;
-			z-index: 1;
-			/* Effect ko image ke peeche rakhne ke liye */
-			animation: glowing 1300ms infinite;
-		}
-
-		@keyframes glowing {
-			0% {
-				box-shadow: 0 0 5px darkgreen;
-			}
-
-			50% {
-				box-shadow: 0 0 50px darkgreen;
-			}
-
-			100% {
-				box-shadow: 0 0 5px darkgreen;
-			}
-		}
-
-		@media only screen and (max-width:600px) {
-			.whatsapp_img {
-				width: 24%;
-				/* Mobile devices ke liye width */
-			}
-		}
-	</style>
+	<link rel="stylesheet" href="whatsapp.css">
+  
 
 	<div class="whatsapp_main">
-		<a href="https://wa.me/919650799561" target="_blank">
-			<div class="whatsapp_container">
-				<img src="../wp-content/uploads/2019/04/Whatsapp-image.png" class="whatsapp_img">
-				<div class="whatsapp_effect"></div> <!-- ye new div hai jo effect ke liye hai -->
-			</div>
-		</a>
+	  <a href="https://wa.me/919650799561" target="_blank">
+		<div class="whatsapp_container">
+		  <img src="wp-content/uploads/2019/04/Whatsapp-image.png" class="whatsapp_img">
+		  <div class="whatsapp_effect"></div> <!-- ye new div hai jo effect ke liye hai -->
+		</div>
+	  </a>
 	</div>
 	<!-- Whatsapp End Here -->
 	<link rel="alternate" type="application/rss+xml" title="ROR"
