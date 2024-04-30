@@ -2,6 +2,8 @@
 <html lang="en-US">
 
 <head>
+
+  <!-- test deployment 03-->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="google-site-verification" content="oX-7fQzF7De03-DXYTSb4Mxx7s4zreEWLznqMNj8sjQ" />
@@ -1994,44 +1996,32 @@
                 </div>
               </div>
               <!-- Interest sheet  -->
+              <div class="fd-menu">
+                <button id="cumulative-button">Cumulative</button>
+                <button id="nonCumulative-button">Non-Cumulative</button>
+              </div>
               <div class="fd-table">
+
                 <div class="inner-table-div">
                   <table id="fd-interest-rate-table">
                     <thead>
-                      <tr>
+                      <tr class="grey-background">
                         <th rowspan="2">Name</th>
-                        <th colspan="8">Cumulative</th>
-                        <th colspan="8">Non Cumulative</th>
+                        <th id="timeline" colspan="8">Timeline</th>
                         <th rowspan="2">FD Forms</th>
                       </tr>
-                      <tr>
+                      <tr class="grey-background">
                         <th>12M</th>
                         <th>18M</th>
                         <th>24M</th>
                         <th>30M</th>
                         <th>36M</th>
-                        <th>44M</th>
-                        <th>48M</th>
-                        <th>60M</th>
-                        <th>12M</th>
-                        <th>18M</th>
-                        <th>24M</th>
-                        <th>30M</th>
-                        <th>36M</th>
-                        <th>44M</th>
+                        <th>42M</th>
                         <th>48M</th>
                         <th>60M</th>
                       </tr>
-                      <tr>
+                      <tr id="bajaj-rates">
                         <td>Bajaj Finance Ltd. </td>
-                        <td>7.4</td>
-                        <td>7.5</td>
-                        <td>7.8</td>
-                        <td>7.9</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
@@ -2046,16 +2036,8 @@
                           </a>
                         </td>
                       </tr>
-                      <tr>
-                        <td> PNB Housing Finance Ltd. </td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                      <tr class="grey-background" id="pnb-rates">
+                        <td>PNB Housing Finance Ltd. </td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
@@ -2071,16 +2053,8 @@
                         </td>
 
                       </tr>
-                      <tr>
+                      <tr id="lic-rates">
                         <td>LIC Housing Finance Ltd. </td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
@@ -2096,16 +2070,8 @@
                         </td>
 
                       </tr>
-                      <tr>
-                        <td> Shriram Transport Finance Company <br>Ltd. </td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                      <tr class="grey-background" id="shriram-rates">
+                        <td> Shriram Transport Finance Company Ltd. </td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
@@ -2231,9 +2197,9 @@
               <!-- code for interest calculator -->
               <div class="calc-container">
                 <div style="display: flex; flex-direction: column; align-items: center;">
-                  <h2>Fixed Deposit Calculator</h2>
-                  <br>
+                  <p class="fd-heading">Fixed Deposit Calculator</p>
                   <p>Check returns on your investment</p>
+                  <p>(Approximate)</p>
                 </div>
                 <div class="inner-view">
                   <div class="calculator">
@@ -2241,10 +2207,14 @@
                     <input type="number" id="principal" placeholder="Enter original amount" min="5000" max="1000000"
                       value="5000">
                     <!-- Set minimum limit to 5000 and maximum limit to 1,000,000 -->
-                    <input type="range" id="slider" min="5000" max="1000000" step="1000" value="5000">
+                    <input type="range" class="input-slider" id="slider" min="5000" max="1000000" step="1000"
+                      value="5000">
                     <!-- Set minimum limit to 5000 and maximum limit to 1,000,000 -->
-                    <label for="time">Number of Months:</label>
-                    <select id="time">
+                    <label for="time" id="numberOfMonth"></label>
+                    <input type="range" class="input-slider" id="time" min="12" max="60" step="6" value="12">
+                    <!-- Set minimum limit to 5000 and maximum limit to 1,000,000 -->
+
+                    <!-- <select id="time">
                       <option value="12">12 months</option>
                       <option value="18">18 months</option>
                       <option value="24">24 months</option>
@@ -2252,12 +2222,13 @@
                       <option value="36">36 months</option>
                       <option value="42">42 months</option>
                       <option value="48">48 months</option>
-                    </select>
+                    </select> -->
                     <label for="bank">Bank or Company:</label>
                     <select id="bank">
                       <option value="PNB">PNB</option>
                       <option value="Bajaj">Bajaj</option>
                       <option value="LIC">LIC</option>
+                      <option value="Shriram">Shriram Transport</option>
                       <!-- Add more options as needed -->
                     </select>
                     <button id="calc-interest">Calculate</button>
@@ -2265,10 +2236,9 @@
                   </div>
                   <div class="result-display">
                     <div id="chartContainer">
-                      <canvas id="pieChart"></canvas>
-                      <div id="result"></div>
-
+                      <canvas id="pieChart" height="600"></canvas>
                     </div>
+                    <div id="result"></div>
                   </div>
                 </div>
               </div>
@@ -2542,6 +2512,9 @@
     };
     /* ]]> */
   </script>
+  <script src="
+ https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js
+ "></script>
   <script type="text/javascript" src="wp-includes/js/wp-embed.min.js@ver=5.2.18"></script>
   <script type="text/javascript"
     src="wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js@ver=5.7"></script>
@@ -2549,7 +2522,6 @@
     var nitro_lazy_load_sources = [];
   </script>
   <script type="module" src="./scripts/fixeddeposits.js"></script>
-  <script type="module" src="./scripts/interestChart.js"></script>
 </body>
 
 </html>
