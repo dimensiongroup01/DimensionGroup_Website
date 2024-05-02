@@ -2506,55 +2506,55 @@
 
               <!-- front cards  -->
               <div class="card-flex-container">
-                <div class="card">
-                  <h1>
+                <div class="card" style="transform-style: preserve-3d; ">
+                  <h1 class="float-text">
                     <span style="color: #202020">Provident Fund</span>
                   </h1>
-                  <span style="color: #303030">A provident fund is a compulsory,
+                  <span class="float-text" style="color: #303030">A provident fund is a compulsory,
                     government-managed retirement savings on
                     behalf of their employees. The money in
                     the fund is then held and managed by the
                     government, and eventually withdrawn.<br>
-                    <a style="color: #2d2d2d" href="provident-fund.html"><span class="readmore"
+                    <a style="color: #2d2d2d" href="provident-fund.html"><span class="readmore float-text"
                         style="text-decoration: underline">Read More&#8230;</span></a></span>
                 </div>
                 <div class="card">
-                  <h1>
+                  <h1 class="float-text">
                     <span style="color: #202020">Bonds</span>
                   </h1>
-                  <span style="color: #303030">Governments (at all levels) and
+                  <span class="float-text" style="color: #303030">Governments (at all levels) and
                     corporations commonly use bonds in order
                     to borrow money. Governments need to
                     fund roads, schools, dams or other
                     infrastructure. The sudden expense of a
                     war.<br>
-                    <a style="color: #2d2d2d" href="bond.html"><span class="readmore"
+                    <a class="float-text readmore" style="color: #2d2d2d" href="bond.html"><span
                         style="text-decoration: underline">Read More&#8230;</span></a></span>
                 </div>
                 <div class="card">
-                  <h1>
+                  <h1 class="float-text">
                     <span style="color: #202020">Mutual Funds</span>
                   </h1>
-                  <span style="color: #303030">A mutual fund is an entity that pools
+                  <span class="float-text" readmore style="color: #303030">A mutual fund is an entity that pools
                     the money of many investors, its
                     unit-holders, to invest in different
                     securities. Investments may be in
                     shares, debt securities, money market
                     securities or a combination of these.<br>
-                    <a style="color: #2d2d2d" href="mutual-fund.html"><span class="readmore"
+                    <a class="float-text readmore" style="color: #2d2d2d" href="mutual-fund.html"><span
                         style="text-decoration: underline">Read More&#8230;</span></a></span>
                 </div>
                 <div class="card">
-                  <h1>
+                  <h1 class="float-text">
                     <span style="color: #202020">Fixed Deposit</span>
                   </h1>
-                  <span style="color: #303030">Fixed deposits are one of India&#8217;s
+                  <span class="float-text" style="color: #303030">Fixed deposits are one of India&#8217;s
                     favorite investment options, as they
                     give investors the assurance of fixed
                     returns, with high interest rates. We
                     offer only fixed deposits from leading
                     corporate houses.<br>
-                    <a style="color: #2d2d2d" href="fixed-deposit.html"><span class="readmore"
+                    <a style="color: #2d2d2d" href="fixed-deposit.html"><span class="float-text readmore"
                         style="text-decoration: underline">Read More&#8230;</span></a></span>
                 </div>
               </div>
@@ -3419,16 +3419,24 @@
         ]
       }
     </script>
-
-
   <!-- Tilt Effect on mouse hover -->
   <script>
     const tiltEffectSettings = {
-      max: 25, // max tilt rotation (degrees (deg))
+      max: 15, // max tilt rotation (degrees (deg))
       perspective: 1000, // transform perspective, the lower the more extreme the tilt gets (pixels (px))
-      scale: 1.1, // transform scale - 2 = 200%, 1.5 = 150%, etc..
-      speed: 500, // speed (transition-duration) of the enter/exit transition (milliseconds (ms))
-      easing: "cubic-bezier(.03,.98,.52,.99)" // easing (transition-timing-function) of the enter/exit transition
+      scale: 1, // transform scale - 2 = 200%, 1.5 = 150%, etc..
+      speed: 600, // speed (transition-duration) of the enter/exit transition (milliseconds (ms))
+      easing: "cubic-bezier(.03,.98,.52,.99)", // easing (transition-timing-function) of the enter/exit transition
+      axis: { // Specify the axis property for both x and y-axis tilt
+        x: true, // Enable tilt effect on the x-axis
+        y: true // Enable tilt effect on the y-axis
+      },
+      gyroscope: true,   // Boolean to enable/disable device orientation detection,
+      gyroscopeMinAngleX: -45,    // This is the bottom limit of the device angle on X axis, meaning that a device rotated at this angle would tilt the element as if the mouse was on the left border of the element;
+      gyroscopeMaxAngleX: 45,     // This is the top limit of the device angle on X axis, meaning that a device rotated at this angle would tilt the element as if the mouse was on the right border of the element;
+      gyroscopeMinAngleY: -45,    // This is the bottom limit of the device angle on Y axis, meaning that a device rotated at this angle would tilt the element as if the mouse was on the top border of the element;
+      gyroscopeMaxAngleY: 45,     // This is the top limit of the device angle on Y axis, meaning that a device rotated at this angle would tilt the element as if the mouse was on the bottom border of the element;
+
     };
 
     const cards = document.querySelectorAll(".card");
