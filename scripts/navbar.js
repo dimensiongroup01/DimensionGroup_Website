@@ -35,7 +35,7 @@ window.onload = function () {
               </li>
               <li id="menu-item-398"
                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398">
-                <a href="index.html@p=2.html">About Us</a>
+                <a href="about.html">About Us</a>
               </li>
               <li id="menu-item-399"
                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399">
@@ -81,15 +81,15 @@ window.onload = function () {
               </li>
               <li id="menu-item-404"
                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-404">
-                <a href="index.html@p=19.html">Contact Us</a>
+                <a href="contact.html">Contact Us</a>
               </li>
               <li id="menu-item-403"
                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-403">
-                <a href="index.html@p=343.html">Careers</a>
+                <a href="career.html">Careers</a>
               </li>
               <li id="menu-item-405"
                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-405">
-                <a href="index.html@p=162.html">Gallery</a>
+                <a href="gallery.html">Gallery</a>
               </li>
             </ul>
           </div>
