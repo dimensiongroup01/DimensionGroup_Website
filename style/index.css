@@ -1,12 +1,18 @@
-.main-content{
+.main-content {
   /* position: relative; */
   /* top: 100px; */
 }
+
 .hero-section-texrt {
   position: relative;
   z-index: 1000;
   display: flex;
   background-color: red;
+}
+
+.float-text {
+  transform: translateZ(40px);
+  text-align: justify;
 }
 
 .card-flex-container {
@@ -18,6 +24,8 @@
 }
 
 .card {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
   position: relative;
   width: 300px;
   background-color: rgb(255, 255, 255);
