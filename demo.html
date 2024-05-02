@@ -41,7 +41,6 @@
             margin: 10px 0;
         }
     </style>
-    <!-- Chatbot Container -->
     <div id="chatbot-container" style="position: fixed; bottom: 0; right: 20px; z-index: 1000;">
         <script src="https://www.chatbase.co/embed.min.js" chatbotId="OHQ3UwlUN-YjWWEbHxy4i" domain="www.chatbase.co"
             defer></script>
@@ -102,25 +101,22 @@
 
 
     <script>
-        // Get the chatbot button div
-        const chatbotButton = document.getElementById('chatbase-bubble-button');
+        let scrollElement = window;
+        // Listen for the scroll event on the scrollElement
+        scrollElement.addEventListener('scroll', function () {
+            // Get the Y value of the scroll position
+            var scrollY = scrollElement.scrollY || scrollElement.pageYOffset;
 
-        // Variable to store the last known scroll position
-        let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        window.addEventListener('scroll', function () {
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            // Check if the scroll is downward
-            if (scrollTop > lastScrollTop) {
-                // Hide the chatbot
-                if (chatbotButton) chatbotButton.style.display = 'none';
-            } else {
-                // Show the chatbot
-                if (chatbotButton) chatbotButton.style.display = 'block';
+            // Do something with the scrollY value, such as logging it to the console
+            console.log('Vertical scroll position:', scrollY);
+            let chatButton = document.getElementById("chatbase-bubble-button");
+            if (scrollY > 200 && chatButton) {
+                console.log("high value");
+                chatButton.style.display = "none";
+            } else if (scrollY < 200) {
+                // Create a new element with the same attributes as the removed element
+                chatButton.style.display = "block";
             }
-            // Update the last known scroll position
-            lastScrollTop = scrollTop;
         });
     </script>
 
