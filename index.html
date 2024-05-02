@@ -2506,59 +2506,86 @@
 
               <!-- front cards  -->
               <div class="card-flex-container">
-                <div class="card" style="transform-style: preserve-3d; ">
-                  <h1 class="float-text">
-                    <span style="color: #202020">Provident Fund</span>
-                  </h1>
-                  <span class="float-text" style="color: #303030">A provident fund is a compulsory,
-                    government-managed retirement savings on
-                    behalf of their employees. The money in
-                    the fund is then held and managed by the
-                    government, and eventually withdrawn.<br>
-                    <a style="color: #2d2d2d" href="provident-fund.html"><span class="readmore float-text"
-                        style="text-decoration: underline">Read More&#8230;</span></a></span>
-                </div>
-                <div class="card">
-                  <h1 class="float-text">
-                    <span style="color: #202020">Bonds</span>
-                  </h1>
-                  <span class="float-text" style="color: #303030">Governments (at all levels) and
-                    corporations commonly use bonds in order
-                    to borrow money. Governments need to
-                    fund roads, schools, dams or other
-                    infrastructure. The sudden expense of a
-                    war.<br>
-                    <a class="float-text readmore" style="color: #2d2d2d" href="bond.html"><span
-                        style="text-decoration: underline">Read More&#8230;</span></a></span>
-                </div>
-                <div class="card">
-                  <h1 class="float-text">
-                    <span style="color: #202020">Mutual Funds</span>
-                  </h1>
-                  <span class="float-text" readmore style="color: #303030">A mutual fund is an entity that pools
-                    the money of many investors, its
-                    unit-holders, to invest in different
-                    securities. Investments may be in
-                    shares, debt securities, money market
-                    securities or a combination of these.<br>
-                    <a class="float-text readmore" style="color: #2d2d2d" href="mutual-fund.html"><span
-                        style="text-decoration: underline">Read More&#8230;</span></a></span>
-                </div>
-                <div class="card">
-                  <h1 class="float-text">
-                    <span style="color: #202020">Fixed Deposit</span>
-                  </h1>
-                  <span class="float-text" style="color: #303030">Fixed deposits are one of India&#8217;s
-                    favorite investment options, as they
-                    give investors the assurance of fixed
-                    returns, with high interest rates. We
-                    offer only fixed deposits from leading
-                    corporate houses.<br>
-                    <a style="color: #2d2d2d" href="fixed-deposit.html"><span class="float-text readmore"
-                        style="text-decoration: underline">Read More&#8230;</span></a></span>
-                </div>
+                <a href="provident-fund.html" class="card" style="transform-style: preserve-3d; ">
+                  <div class="float-text">
+                    <h1>
+                      <span style="color: #202020">Provident Fund</span>
+                    </h1>
+                    <span class="float-text" style="color: #303030">
+                      A provident fund is a compulsory,
+                      government-managed retirement savings on
+                      behalf of their employees. The money in
+                      the fund is then held and managed by the
+                      government, and eventually withdrawn.
+                      <br>
+                      <span class="readmore float-text"></span></span>
+                  </div>
+                </a>
+                <a href="bond.html" class="card" style="transform-style: preserve-3d; ">
+                  <div class="float-text">
+                    <h1>
+                      <span style="color: #202020">Bonds</span>
+                    </h1>
+                    <span class="float-text" style="color: #303030">
+                      Governments (at all levels) and
+                      corporations commonly use bonds in order
+                      to borrow money. Governments need to
+                      fund roads, schools, dams or other
+                      infrastructure. The sudden expense of a
+                      war.
+                      <br>
+                      <span class="readmore float-text"></span></span>
+                  </div>
+                </a>
+                <a href="mutual-fund.html" class="card" style="transform-style: preserve-3d; ">
+                  <div class="float-text">
+                    <h1>
+                      <span style="color: #202020">Mutual Funds
+                    </h1>
+                    <span class="float-text" style="color: #303030">
+                      A mutual fund is an entity that pools
+                      the money of many investors, its
+                      unit-holders, to invest in different
+                      securities. Investments may be in
+                      shares, debt securities, money market
+                      securities or a combination of these.
+                      <br>
+                      <span class="readmore float-text"></span></span>
+                  </div>
+                </a>
+                <a href="fixed-deposit.html" class="card" style="transform-style: preserve-3d; ">
+                  <div class="float-text">
+                    <h1>
+                      <span style="color: #202020">Fixed Deposit</span>
+                    </h1>
+                    <span class="float-text" style="color: #303030">
+                      Fixed deposits are one of India&#8217;s
+                      favorite investment options, as they
+                      give investors the assurance of fixed
+                      returns, with high interest rates. We
+                      offer only fixed<br> deposits from leading
+                      corporate houses.
+                      <br>
+                      <span class="readmore float-text"></span></span>
+                  </div>
+                </a>
               </div>
+              <!-- script to add click text -->
+              <script>
+                const cardLinks = document.querySelectorAll('.card');
+                cardLinks.forEach(cardLink => {
+                  console.log(cardLink);
+                  cardLink.addEventListener('mouseenter', () => {
+                    const readmoreSpan = cardLink.querySelector('.readmore');
+                    readmoreSpan.textContent = "Click for more details";
+                  });
+                  cardLink.addEventListener('mouseleave', () => {
+                    const readmoreSpan = cardLink.querySelector('.readmore');
+                    readmoreSpan.textContent = "";
+                  });
+                });
 
+              </script>
 
               <div class="container">
                 <div class="vc_row wpb_row vc_row-fluid">
@@ -3446,7 +3473,7 @@
       card.addEventListener("mousemove", cardMouseMove);
       card.addEventListener("mouseleave", cardMouseLeave);
     });
-    
+
     function cardMouseEnter(event) {
       setTransition(event);
     }
