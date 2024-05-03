@@ -122,8 +122,11 @@ window.onload = function () {
     <a href="#" target="_blank">Inhouse Developers of Dimension</a>
   </div>
 </div>
-<div id="wr-back-top">
-  <a href="javascript:void(0);" class="heading-color hover-bg-primary dib overlay_bg nitro-line"
-    title="Back to top"><i class="fa fa-angle-up"></i></a>
-</div>`;
+`;
 };
+
+
+// <div id="wr-back-top">
+//   <a href="javascript:void(0);" class="heading-color hover-bg-primary dib overlay_bg nitro-line"
+//     title="Back to top"><i class="fa fa-angle-up"></i></a>
+// </div>
