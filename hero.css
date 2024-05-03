@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    height: 2000px;
+}
+
+.main-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.hero-section {
+    margin: 32px 0;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    gap: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    position: relative;
+    /* top: -150px; */
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.hero-text a {
+    color: white;
+    text-decoration: none;
+}
+
+#detail-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.hero-graphic {
+    padding: 16px;
+    border-radius: 24px;
+    background-color: rgba(217, 217, 217, 0.378);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-graphic>img {
+    position: relative;
+    right: 0;
+    width: 500px;
+    aspect-ratio: 4/5;
+}
+
+#name {
+    font-size: 60px;
+    font-weight: bold;
+
+}
+
+.gradient-animate-text {
+    background: linear-gradient(45deg, #379BD6, #07447D, #379BD6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+
+    0% {
+        background-position: 0% 50%;
+    }
+}
+
+#hero-cta {
+    margin-top: 32px;
+    height: 50px;
+    width: 180px;
+    background: linear-gradient(45deg, #379BD6, #07447D, #379BD6);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 400% 400%;
+    animation: button 15s ease infinite;
+}
+
+@keyframes button {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+
+    0% {
+        background-position: 100% 50%;
+    }
+}
+
+
+.scroll-down-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+#scroll-text {
+    background: linear-gradient(45deg, #379BD6, #07447D, #379BD6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% auto;
+    font-weight: 700;
+    animation: scroll 5s ease infinite;
+}
+
+@keyframes scroll {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+
+    0% {
+        background-position: 0% 50%;
+    }
+}
+
+#scroll-shape {
+    background-color: transparent;
+    border: solid 3px;
+    border-color: #379BD6;
+    border-radius: 500px;
+    width: 50px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#scroll-shape::after {
+    position: absolute;
+    top: 25%;
+    content: "";
+    height: 0px;
+    width: 2px;
+    background-color: rgb(80, 117, 238);
+    border-radius: 40px;
+    animation: size infinite 1.5s ease-in-out;
+}
+
+@keyframes size {
+
+    0% {
+        height: 0px;
+
+    }
+
+    100% {
+        height: 50px;
+
+    }
+
+    0% {
+        height: 0px;
+    }
+
+}
+
+/* #arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+} */
+
+/* #arrow{
+    width: 2px;
+    height: 50px;
+    background-color: #07447D;
+} */
+
+/* #arrow>img {
+    height: 40px;
+    margin-top: 0px;
+    animation: arrow 2s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+}
+
+@keyframes arrow {
+    0% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: 10px;
+    }
+
+    0% {
+        margin-top: 0;
+    }
+} */
+
+.clients {
+    margin: 32px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#clients {
+    margin: 16px;
+}
+
+.carousel-container {
+
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.carousel-slider {
+    width: 80%;
+    display: inline-block;
+}
+
+.carousel-slider__item {
+    display: inline-block;
+    margin-right: 32px;
+    /* Adjust spacing between items */
+}
