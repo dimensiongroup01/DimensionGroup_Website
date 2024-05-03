@@ -140,13 +140,91 @@
                 <li>Step 3: Run the installation wizard.</li>
             </ul>
         </section>
+
         <section>
+
+
             <h2>Features</h2>
             <p>Product XYZ offers a variety of features:</p>
             <ul>
                 <li>Feature A - Description</li>
                 <li>Feature B - Description</li>
                 <li>Feature C - Description</li>
+            </ul>
+        </section>
+        <div class="carousel-container">
+            <div class="carousel-slider">
+                <div class="carousel-slider__item">
+                    <img width="266" height="100" src="wp-content/uploads/2019/05/FORTIS.jpg"
+                        class="attachment-full size-full" alt="" />
+                </div>
+                <div class="carousel-slider__item">
+                    <img width="240" height="100" src="wp-content/uploads/2019/05/BHEL.jpg"
+                        class="attachment-full size-full" alt="" />
+                </div>
+                <div class="carousel-slider__item">
+                    <img width="148" height="100" src="wp-content/uploads/2019/05/MTNL.jpg"
+                        class="attachment-full size-full" alt="" />
+                </div>
+                <div class="carousel-slider__item">
+                    <img width="195" height="100" src="wp-content/uploads/2019/05/IREDA.png"
+                        class="attachment-full size-full" alt="" />
+                </div>
+                <div class="carousel-slider__item">
+                    <img width="95" height="100" src="wp-content/uploads/2019/05/SAIL.jpg"
+                        class="attachment-full size-full" alt="" />
+                </div>
+                <div class="carousel-slider__item">
+                    <img width="184" height="100" src="wp-content/uploads/2019/05/HAL.jpg"
+                        class="attachment-full size-full" alt="" />
+                </div>
+                <div class="carousel-slider__item">
+                    <img width="113" height="100" src="wp-content/uploads/2019/05/NHDC.jpg"
+                        class="attachment-full size-full" alt="" />
+                </div>
+                <div class="carousel-slider__item">
+                    <img width="235" height="70" src="wp-content/uploads/2019/05/DELPHI-e1558015931635.jpg"
+                        class="attachment-full size-full" alt="" />
+                </div>
+                <div class="carousel-slider__item">
+                    <img width="244" height="70" src="wp-content/uploads/2019/05/ICSI-e1558015994247.jpg"
+                        class="attachment-full size-full" alt="" />
+                </div>
+                <div class="carousel-slider__item">
+                    <img width="194" height="100" src="wp-content/uploads/2019/05/ITDC.jpg"
+                        class="attachment-full size-full" alt="" />
+                </div>
+                <div class="carousel-slider__item">
+                    <img width="208" height="60" src="wp-content/uploads/2019/05/HCL-e1558016051853.jpg"
+                        class="attachment-full size-full" alt="" />
+                </div>
+                <div class="carousel-slider__item">
+                    <img width="232" height="80" src="wp-content/uploads/2019/05/MAX-e1558015978223.png"
+                        class="attachment-full size-full" alt="" />
+                </div>
+                <div class="carousel-slider__item">
+                    <img width="279" height="70" src="wp-content/uploads/2019/05/NHPC-e1558016009725.jpg"
+                        class="attachment-full size-full" alt="" />
+                </div>
+            </div>
+        </div>
+        <section>
+            <h2>Troubleshooting</h2>
+            <p>If you experience issues with Product XYZ, consider the following solutions:</p>
+            <ul>
+                <li>Problem 1: Solution</li>
+                <li>Problem 2: Solution</li>
+                <li>Problem 3: Solution</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>FAQ</h2>
+            <p>Frequently Asked Questions about Product XYZ:</p>
+            <ul>
+                <li>What is the warranty period for Product XYZ?</li>
+                <li>How can I update the software?</li>
+                <li>Who do I contact if I have technical issues?</li>
             </ul>
         </section>
         <section>
@@ -158,6 +236,26 @@
                 <li>Problem 3: Solution</li>
             </ul>
         </section>
+
+        <section>
+            <h2>FAQ</h2>
+            <p>Frequently Asked Questions about Product XYZ:</p>
+            <ul>
+                <li>What is the warranty period for Product XYZ?</li>
+                <li>How can I update the software?</li>
+                <li>Who do I contact if I have technical issues?</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Troubleshooting</h2>
+            <p>If you experience issues with Product XYZ, consider the following solutions:</p>
+            <ul>
+                <li>Problem 1: Solution</li>
+                <li>Problem 2: Solution</li>
+                <li>Problem 3: Solution</li>
+            </ul>
+        </section>
+
         <section>
             <h2>FAQ</h2>
             <p>Frequently Asked Questions about Product XYZ:</p>
@@ -173,26 +271,36 @@
     </div>
 
 
-    <script>
-        let scrollElement = window;
-        // Listen for the scroll event on the scrollElement
-        scrollElement.addEventListener('scroll', function () {
-            // Get the Y value of the scroll position
-            var scrollY = scrollElement.scrollY || scrollElement.pageYOffset;
+    <style>
+        .carousel-container {
 
-            // Do something with the scrollY value, such as logging it to the console
-            console.log('Vertical scroll position:', scrollY);
-            let chatButton = document.getElementById("chatbase-bubble-button");
-            if (scrollY > 200 && chatButton) {
-                console.log("high value");
-                chatButton.style.display = "none";
-            } else if (scrollY < 200) {
-                // Create a new element with the same attributes as the removed element
-                chatButton.style.display = "block";
-            }
+            display: flex;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .carousel-slider {
+            width: 80%;
+            display: inline-block;
+        }
+
+        .carousel-slider__item {
+            display: inline-block;
+            margin-right: 32px;
+            /* Adjust spacing between items */
+        }
+    </style>
+    <script>
+        window.addEventListener('scroll', function () {
+            var scrollY = window.scrollY || window.pageYOffset;
+            var container = document.querySelector('.carousel-container');
+            let factor = 0.3; //speed to scroll
+            console.log(factor);
+            container.scrollLeft = scrollY / factor; // 
         });
     </script>
-
 </body>
 
 </html>
