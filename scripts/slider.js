@@ -15,9 +15,9 @@ var divElement = anchorElement.querySelector("#hero-cta");
 // Define an array of data with href and text
 var data = [
   { href: "bond.html", text: "Bonds" },
-  { href: "mutual-fund.html", text: "Mutaul Funds" },
+  { href: "mutual-fund.html", text: "Mutual Funds" },
   { href: "fixed-deposit.html", text: "Fixed Deposits" },
-  { href: "provident-fund.html", text: "Mutaul Funds" },
+  { href: "provident-fund.html", text: "Provident Funds" },
   // Add more data as needed
 ];
 

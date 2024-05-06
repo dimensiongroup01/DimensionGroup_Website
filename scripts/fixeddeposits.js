@@ -103,10 +103,10 @@ function updateTable(type, rateData) {
     let row = document.getElementById(`${company}-rates`);
     let cells = row.getElementsByTagName("td");
 
-    for (let i = 1; i < cells.length - 1; i++) {
+    for (let i = 2; i < cells.length - 1; i++) {
       // Updatting the text content of each cell with the corresponding rate
       let rate =
-        type === "Cumulative" ? cumulativeRates[i] : nonCumulativeRates[i];
+        type === "Cumulative" ? cumulativeRates[i-1] : nonCumulativeRates[i-1];
       cells[i].textContent = rate !== "" ? rate : "--";
     }
   }
