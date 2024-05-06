@@ -49,6 +49,7 @@
 }
 
 .inner-table-div {
+    translate: (-50%,-50%);
     margin: auto;
     width: 80%;
     border-radius: 8px;

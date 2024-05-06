@@ -106,7 +106,9 @@ function updateTable(type, rateData) {
     for (let i = 2; i < cells.length - 1; i++) {
       // Updatting the text content of each cell with the corresponding rate
       let rate =
-        type === "Cumulative" ? cumulativeRates[i-1] : nonCumulativeRates[i-1];
+        type === "Cumulative"
+          ? cumulativeRates[i - 1]
+          : nonCumulativeRates[i - 1];
       cells[i].textContent = rate !== "" ? rate : "--";
     }
   }
@@ -145,6 +147,16 @@ function initializeCalculator() {
     // Update input field value when slider changes
     principalInput.value = this.value;
   });
+  let sliderMonth = document.getElementById("time");
+  let numberOfMonth = document.getElementById("numberOfMonth");
+
+  // Set the initial value of numberOfMonth based on the value of sliderMonth
+  numberOfMonth.innerHTML = "Number of Months: " + sliderMonth.value;
+
+  // Add an event listener to sliderMonth to update numberOfMonth when its value changes
+  sliderMonth.addEventListener("input", function () {
+    numberOfMonth.innerHTML = "Number of Months: " + sliderMonth.value;
+  });
 }
 
 let interest, principal, totalAmount;
@@ -152,8 +164,6 @@ let interestPieChart; // Declare interestPieChart outside the function to access
 
 // Function to calculate interest
 function calculateInterest() {
-  numberOfMonth.innerHTML = "Number of Months: " + ` ${sliderMonth.value}`;
-
   // Get input values
   principal = parseFloat(document.getElementById("principal").value);
   let time = parseInt(document.getElementById("time").value);
@@ -243,14 +253,12 @@ initializeCalculator();
 let principalInput = document.getElementById("principal");
 let slider = document.getElementById("slider");
 let calButton = document.getElementById("calc-interest");
-let sliderMonth = document.getElementById("time");
-let numberOfMonth = document.getElementById("numberOfMonth");
 // default calculator
 calculateInterest();
 
 // listen input change
-principalInput.addEventListener("input", calculateInterest);
-slider.addEventListener("mouseleave", calculateInterest);
+// principalInput.addEventListener("input", calculateInterest);
+// slider.addEventListener("mouseleave", calculateInterest);
 calButton.addEventListener("click", calculateInterest);
 sliderMonth.addEventListener("mouseleave", calculateInterest);
 function createPieChart(principal, interest) {
