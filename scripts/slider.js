@@ -2,8 +2,7 @@ window.addEventListener("scroll", function () {
   var scrollY = window.scrollY || window.pageYOffset;
   var container = document.querySelector(".carousel-container");
   let factor = 0.5; //speed to scroll
-  console.log(factor);
-  container.scrollLeft = scrollY / factor; //
+  container.scrollLeft = scrollY / factor; 
 });
 
 // Get the anchor element by its ID
