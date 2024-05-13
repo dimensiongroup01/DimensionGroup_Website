@@ -7854,7 +7854,9 @@ body .wrapper-outer>.wrapper>.header-outer~div {
     border-radius: 2px
 }
 
-.site-title>.container .term-more:hover {
+.site-title>
+
+.term-more:hover {
     color: #fff;
     background: #323232
 }
@@ -10006,7 +10008,7 @@ body.admin-bar .hb-menu-outer .sidebar-style {
     bottom: 0;
     width: 100%;
     z-index: 999;
-    background: #fff
+    background: #fff;
 }
 
 .hb-cart-outer .hb-minicart {
