@@ -269,12 +269,16 @@ function createPieChart(principal, interest) {
   }
   // console.log(principal, interest);
   interestPieChart = new Chart(ctx, {
-    type: "pie",
+    type: "line",
     data: {
-      labels: ["Principal", "Interest"],
+      labels: ["Principal", "Year"],
       datasets: [
         {
-          data: [principal, interest],
+          data: [
+            { x: 0, y: 20 },
+            { x: 5, y: 10 },
+            { x: 15, y: 10 },
+          ],
           backgroundColor: [
             "#379BD6", // Blue for Interest
             "rgb(224, 224, 224)", // Red for Principal
@@ -283,6 +287,15 @@ function createPieChart(principal, interest) {
         },
       ],
     },
+    animation: {
+      tension: {
+        duration: 1000,
+        easing: "linear",
+        from: 1,
+        to: 0,
+        loop: true,
+      },
+      },
     options: {
       title: {
         display: true,
