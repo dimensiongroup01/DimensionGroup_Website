@@ -164,6 +164,10 @@ let interestPieChart; // Declare interestPieChart outside the function to access
 
 // Function to calculate interest
 function calculateInterest() {
+  let interestValue = [0];
+  let timeInMonths = [0];
+  let totalReturn = [0];
+
   // Get input values
   principal = parseFloat(document.getElementById("principal").value);
   let time = parseInt(document.getElementById("time").value);
@@ -180,17 +184,23 @@ function calculateInterest() {
     return;
   }
   // Calculate interest
-  let interestRate = getInterestRate(bank, time);
-
-  let interest = (principal * interestRate * (time / 12)) / 100;
-
+  for (let t = 12; t <= time; t += 6) {
+    let interestRate = getInterestRate(bank, t);
+    let interest = (principal * interestRate * (t / 12)) / 100;
+    timeInMonths.push(t);
+    interestValue.push(interest);
+    totalReturn.push(principal + interest);
+    console.log(totalReturn);
+  }
   // Display result
   let resultDiv = document.getElementById("result");
   totalAmount = principal + interest;
   resultDiv.innerHTML = `Total amount: ${totalAmount.toFixed(2)}`;
+  // console.log(timeInMonths, interestValue);
+
   clearCanvas();
   // Update the pie chart with the new values
-  createPieChart(principal, interest);
+  createPieChart(interestValue, totalReturn, timeInMonths);
 }
 
 // Function to get interest rate based on bank and time
@@ -261,45 +271,45 @@ calculateInterest();
 // slider.addEventListener("mouseleave", calculateInterest);
 calButton.addEventListener("click", calculateInterest);
 sliderMonth.addEventListener("mouseleave", calculateInterest);
-function createPieChart(principal, interest) {
+function createPieChart(interestValue, totalReturn, timeInMonths) {
+  console.log(interestValue);
   const ctx = document.getElementById("pieChart").getContext("2d");
   // Destroy existing chart if it exists
   if (interestPieChart) {
     interestPieChart.destroy();
   }
   // console.log(principal, interest);
+
   interestPieChart = new Chart(ctx, {
     type: "line",
+    fill: true,
     data: {
-      labels: ["Principal", "Year"],
+      labels: timeInMonths,
       datasets: [
+        
         {
-          data: [
-            { x: 0, y: 20 },
-            { x: 5, y: 10 },
-            { x: 15, y: 10 },
-          ],
-          backgroundColor: [
-            "#379BD6", // Blue for Interest
-            "rgb(224, 224, 224)", // Red for Principal
-          ],
-          borderWidth: 1,
+          label: "Interest",
+          data: interestValue,
+          backgroundColor:"rgba(255,183,99)",
+        },
+        {
+          label: "Total Return",
+          backgroundColor:"rgba(114,187,255)",
+
+          data: totalReturn,
         },
       ],
     },
-    animation: {
-      tension: {
-        duration: 1000,
-        easing: "linear",
-        from: 1,
-        to: 0,
-        loop: true,
-      },
-      },
     options: {
-      title: {
-        display: true,
-        text: "Breakdown of Total Amount",
+      fill:true,
+      animation: {
+        tension: {
+          duration: 3000,
+          easing: "linear",
+          from: 1,
+          to: 0,
+          loop: true,
+        },
       },
     },
   });
@@ -313,7 +323,7 @@ function updatePieChart(principal, interest) {
     interestPieChart.update();
   } else {
     // Create new chart if it doesn't exist
-    createPieChart(principal, interest);
+    createPieChart(interestValue);
   }
 }
 
