@@ -5,8 +5,6 @@ import {
   getDatabase,
   ref,
   set,
-  push,
-  onValue,
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
 const firebaseConfig = {
@@ -20,12 +18,8 @@ const firebaseConfig = {
   appId: "1:871665762975:web:0244983375d356a25958aa",
 };
 
-// var confettiSettings = { target: 'my-canvas' };
-// var confetti = new ConfettiGenerator(confettiSettings);
-
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-console.log("hello");
 
 const today = new Date();
 const month = today.getMonth() + 1;
@@ -40,13 +34,28 @@ console.log(userID);
 // Create a reference with the userID as the key
 const userRef = ref(database, `client/${userID}`);
 
-function submitClientData() {
-  let name = document.getElementById("name");
-  let mail = document.getElementById("mail");
-  let number = document.getElementById("number");
-  let panNumber = document.getElementById("pan");
 
-  const userData ={
+
+let submit = document.getElementById("submit");
+let panNumber = document.getElementById("pan");
+console.log(panNumber.value);
+submit.style.display = "none";
+
+panNumber.addEventListener("input", function () {
+  if (panNumber.value.trim() !== "") {
+    submitButton.style.display = "inline-block";
+  } else {
+    submitButton.style.display = "none";
+  }
+});
+
+let mail = document.getElementById("mail");
+let name = document.getElementById("name");
+let number = document.getElementById("number");
+let nextButton = document.getElementById("next");
+
+function submitClientData() {
+  const userData = {
     fullName: `${name.value}`,
     email: `${mail.value}`,
     number: `${number.value}`,
