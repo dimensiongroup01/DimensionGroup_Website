@@ -190,12 +190,13 @@ function calculateInterest() {
     timeInMonths.push(t);
     interestValue.push(interest);
     totalReturn.push(principal + interest);
-    console.log(totalReturn);
+    console.log(totalReturn[length]);
   }
   // Display result
   let resultDiv = document.getElementById("result");
   totalAmount = principal + interest;
-  resultDiv.innerHTML = `Total amount: ${totalAmount.toFixed(2)}`;
+  resultDiv.innerHTML = `Total amount: ${totalReturn[length].toFixed(2)}`;
+  console.log(totalAmount);
   // console.log(timeInMonths, interestValue);
 
   clearCanvas();
@@ -205,7 +206,7 @@ function calculateInterest() {
 
 // Function to get interest rate based on bank and time
 function getInterestRate(bank, time) {
-  // Define interest rates for different banks and time periods
+  
   let rates = {
     PNB: {
       12: 7.75,
@@ -266,19 +267,14 @@ let calButton = document.getElementById("calc-interest");
 // default calculator
 calculateInterest();
 
-// listen input change
-// principalInput.addEventListener("input", calculateInterest);
-// slider.addEventListener("mouseleave", calculateInterest);
 calButton.addEventListener("click", calculateInterest);
 sliderMonth.addEventListener("mouseleave", calculateInterest);
 function createPieChart(interestValue, totalReturn, timeInMonths) {
-  console.log(interestValue);
   const ctx = document.getElementById("pieChart").getContext("2d");
   // Destroy existing chart if it exists
   if (interestPieChart) {
     interestPieChart.destroy();
   }
-  // console.log(principal, interest);
 
   interestPieChart = new Chart(ctx, {
     type: "line",
@@ -286,22 +282,21 @@ function createPieChart(interestValue, totalReturn, timeInMonths) {
     data: {
       labels: timeInMonths,
       datasets: [
-        
         {
           label: "Interest",
           data: interestValue,
-          backgroundColor:"rgba(255,183,99)",
+          backgroundColor: "rgba(255,183,99)",
         },
         {
-          label: "Total Return",
-          backgroundColor:"rgba(114,187,255)",
+          label: "Total Amount",
+          backgroundColor: "rgba(114,187,255)",
 
           data: totalReturn,
         },
       ],
     },
     options: {
-      fill:true,
+      fill: true,
       animation: {
         tension: {
           duration: 3000,
