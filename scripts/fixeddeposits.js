@@ -166,7 +166,7 @@ let interestPieChart; // Declare interestPieChart outside the function to access
 function calculateInterest() {
   let interestValue = [0];
   let timeInMonths = [0];
-  let totalReturn = [0];
+  const totalReturn = [0];
 
   // Get input values
   principal = parseFloat(document.getElementById("principal").value);
@@ -190,13 +190,16 @@ function calculateInterest() {
     timeInMonths.push(t);
     interestValue.push(interest);
     totalReturn.push(principal + interest);
-    console.log(totalReturn[length]);
   }
+  // console.log(totalReturn);
   // Display result
   let resultDiv = document.getElementById("result");
-  totalAmount = principal + interest;
-  resultDiv.innerHTML = `Total amount: ${totalReturn[length].toFixed(2)}`;
-  console.log(totalAmount);
+  // console.log(totalReturn.length);
+  totalAmount = totalReturn[length];
+  // console.log(totalAmount);
+  resultDiv.innerHTML = `Total amount: ${totalReturn[
+    totalReturn.length - 1
+  ].toFixed(2)}`;
   // console.log(timeInMonths, interestValue);
 
   clearCanvas();
@@ -206,7 +209,7 @@ function calculateInterest() {
 
 // Function to get interest rate based on bank and time
 function getInterestRate(bank, time) {
-  
+  // Define interest rates for different banks and time periods
   let rates = {
     PNB: {
       12: 7.75,
@@ -268,13 +271,14 @@ let calButton = document.getElementById("calc-interest");
 calculateInterest();
 
 calButton.addEventListener("click", calculateInterest);
-sliderMonth.addEventListener("mouseleave", calculateInterest);
+// sliderMonth.addEventListener("mouseleave", calculateInterest);
 function createPieChart(interestValue, totalReturn, timeInMonths) {
   const ctx = document.getElementById("pieChart").getContext("2d");
   // Destroy existing chart if it exists
   if (interestPieChart) {
     interestPieChart.destroy();
   }
+  // console.log(principal, interest);
 
   interestPieChart = new Chart(ctx, {
     type: "line",
@@ -288,9 +292,8 @@ function createPieChart(interestValue, totalReturn, timeInMonths) {
           backgroundColor: "rgba(255,183,99)",
         },
         {
-          label: "Total Amount",
+          label: "Total Return",
           backgroundColor: "rgba(114,187,255)",
-
           data: totalReturn,
         },
       ],
