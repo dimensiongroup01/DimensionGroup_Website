@@ -1,0 +1,63 @@
+.annual-table {
+    display: flex;
+    justify-content: center;
+}
+
+.doc-container {
+    width: 70%;
+}
+
+.table-header thead {
+    background-color: #044C84;
+    color: white;
+    font-weight: 500;
+}
+
+
+.doc-links {
+    color: #044C84;
+    text-decoration: underline;
+}
+
+.doc-heading {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.doc-heading h3 {
+    font-size: 28px;
+}
+
+.top-backimage {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 400px;
+    background-image: url('../wp-content/uploads/2024/saving-money-concept-preset-by-male-hand-putting-money-coin-stack-growing-business-arrange-coins-into-heaps-with-hands-content-about-money.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+}
+
+.top-backimage>h2 {
+    position: relative;
+    z-index: 2;
+    font-weight: 700;
+    font-size: 40px;
+    color: #9bc8ea;
+}
+
+.top-backimage>div {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    background-color: #00000079;
+}
