@@ -3,15 +3,53 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 24px;
+    margin: 24px;
 }
 
 .download {
-    width: 300px;
-    height: 200px;
-    background-color: gray;
+    width: 240px;
+    height: 140px;
+    background-color: rgb(222, 222, 222);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.doc {}
+.download p {
+    font-weight: 600;
+}
+
+.download a {
+    height: 40px;
+    width: 160px;
+    background-color: #044C84;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+}
+
+.download a:hover {
+    background-color: white;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .policy-doc {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        margin: 24px;
+    }
+    footer{
+        margin-top: 100px;
+    }
+  }

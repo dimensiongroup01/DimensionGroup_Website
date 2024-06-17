@@ -94,3 +94,4 @@ submitButton.addEventListener("click", submitClientData);
 
 
 console.log(window.location.hostname);
+

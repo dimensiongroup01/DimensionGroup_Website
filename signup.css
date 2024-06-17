@@ -1,4 +1,3 @@
- /*custom font*/
  @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
  * {
@@ -6,22 +5,22 @@
      padding: 0;
  }
 
- html {
-     overflow: hidden;
-     height: 100vh;
+ body {
+     height: 100%;
+     position: relative;
+     right: 0;
+     font-family: montserrat, arial, verdana;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
      background:
          linear-gradient(60deg, #0CC4A3, #00A1F9);
- }
-
- body {
-     width: 100%Z;
-     height: 100%;
-     font-family: montserrat, arial, verdana;
+     background-repeat: no-repeat;
  }
 
  #msform {
-     width: 500px;
-     margin: 50px auto;
+     width: 50%;
+     margin-top: 50px;
      text-align: center;
      position: relative;
  }
@@ -142,11 +141,10 @@
      left: -50%;
      top: 9px;
      z-index: -1;
-     
+
  }
 
  #progressbar li:first-child:after {
-    
      content: none;
  }
 
@@ -155,30 +153,99 @@
      background: #07447D;
      color: white;
  }
+
  #progress {
-    margin-top: 20px;
-    width: 100%;
-    height: 10px;
-    background-color: #f0f0f0;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
+     margin-top: 20px;
+     width: 100%;
+     height: 10px;
+     background-color: #f0f0f0;
+     position: relative;
+     overflow: hidden;
+     border-radius: 10px;
+ }
 
-#progress::after {
-    content: '';
-    display: block;
-    height: 10px;
-    background-image: linear-gradient(60deg, #0CC4A3, #00A1F9);
-    width: 0;
-    animation: grow 3s forwards ease-in;
-}
+ #progress::after {
+     content: '';
+     display: block;
+     height: 10px;
+     background-image: linear-gradient(60deg, #0CC4A3, #00A1F9);
+     width: 0;
+     animation: grow 3s forwards ease-in;
+ }
 
-@keyframes grow {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
-}
+ @keyframes grow {
+     0% {
+         width: 0;
+     }
+
+     100% {
+         width: 100%;
+     }
+ }
+
+ .tutorial {
+     position: relative;
+     bottom: 0;
+     width: 80vw;
+     height: 100%;
+     padding: 12px;
+     display: flex;
+     justify-content: center;
+ }
+
+ #phone {
+     height: 60vh;
+     width: 60vw;
+     overflow: hidden;
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center;
+     animation: photoArray 8s ease-in-out infinite;
+ }
+
+ @keyframes photoArray {
+     0% {
+         background-image: url('wp-content/uploads/assets/investwell-homepage.png');
+     }
+
+     5% {
+         background-image: url('wp-content/uploads/assets/investwell-domainname.png');
+     }
+
+     35% {
+         background-image: url('wp-content/uploads/assets/investwell-domainname.png');
+     }
+
+     40% {
+         background-image: url('wp-content/uploads/assets/investwell-loginpage.png');
+
+     }
+
+     70% {
+         background-image: url('wp-content/uploads/assets/investwell-loginpage.png');
+     }
+
+     75% {
+         background-image: url('wp-content/uploads/assets/investwell-loginpage.png');
+
+     }
+
+     99% {
+         background-image: url('wp-content/uploads/assets/investwell-homepage.png');
+
+     }
+
+     100% {
+         background-image: url('wp-content/uploads/assets/investwell-homepage.png');
+
+     }
+ }
+
+ @media only screen and (max-width: 600px) {
+     #msform {
+         width: 350px;
+         margin: 50px;
+         text-align: center;
+         position: relative;
+     }
+ }

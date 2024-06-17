@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
     <meta charset="UTF-8">
@@ -36,12 +36,12 @@
         <fieldset>
             <h2 class="fs-title">Enter Your Details</h2>
             <h3 class="fs-subtitle">Your data is secure with us</h3>
-            <input required id="pan" type="text" for="dropdown" name="PAN" placeholder="PAN detail" 
+            <input required id="pan" type="text" for="dropdown" name="PAN" placeholder="PAN detail"
                 style="text-transform: uppercase;" maxlength="10">
 
             <input type="button" name="previous" class="previous action-button" value="Previous" />
             <input type="button" id="submit" name="next" class="next action-button" value="Submit" />
-           
+
         </fieldset>
         <fieldset>
             <h2 class="fs-title">Account creation successful</h2>
@@ -50,7 +50,13 @@
             <div id="progress"></div>
             <p style="margin: 8px;"> Redirecting</p>
         </fieldset>
+
     </form>
+    <div class="tutorial">
+        <div class="glass">
+            <div id="phone"></div>
+        </div>
+    </div>
     <script>
         var current_fs, next_fs, previous_fs; //fieldsets
         var left, opacity, scale; //fieldset properties which we will animate
