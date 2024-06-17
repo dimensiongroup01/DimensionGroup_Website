@@ -34,8 +34,6 @@ console.log(userID);
 // Create a reference with the userID as the key
 const userRef = ref(database, `client/${userID}`);
 
-
-
 let submit = document.getElementById("submit");
 let panNumber = document.getElementById("pan");
 console.log(panNumber.value);
@@ -76,3 +74,23 @@ function submitClientData() {
 
 let submitButton = document.getElementById("submit");
 submitButton.addEventListener("click", submitClientData);
+
+// let photoDiv = document.getElementById("phone");
+// let photoArray = [
+//   "wp-content/uploads/assets/investwell-homepage.png",
+//   "wp-content/uploads/assets/investwell-domainname.png",
+//   "wp-content/uploads/assets/investwell-loginpage.png",
+// ];
+
+// let i=0;
+// setInterval(() => {
+//   photoDiv.style.backgroundImage = `url('${photoArray[i]}')`;
+//   i++;
+//   console.log(photoDiv[i]);
+//   if(i==2){
+//     i=0;
+//   }
+// }, 4000);
+
+
+console.log(window.location.hostname);
