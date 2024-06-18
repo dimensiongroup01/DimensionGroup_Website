@@ -1,63 +1,75 @@
-    
-.policy-doc {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    margin: 24px;
-}
-
-.download {
-    width: 240px;
-    height: 140px;
-    background-color: rgb(242, 250, 255);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.download p {
-    font-weight: 600;
-}
-
-.download a {
-    height: 40px;
-    width: 160px;
-    background-color: #044C84;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: 600;
-}
-
-.download a:hover {
-    background-color: white;
-}
-
-footer{
-    position: relative;
-    top: 100px;
-    bottom: 0;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    .policy-doc {
+    html {
         width: 100%;
+    }
+
+    .policy-doc {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .download {
+        width: 240px;
+        height: 140px;
+        background-color: rgb(242, 250, 255);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 24px;
-        margin: 24px;
     }
-    footer{
+
+    .download p {
+        font-weight: 600;
+    }
+
+    .download a {
+        height: 40px;
+        width: 160px;
+        background-color: #044C84;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 600;
+    }
+
+    .download a:hover {
+        background-color: white;
+    }
+
+    footer {
         position: relative;
-        top: 200px;
+        top: 100px;
         bottom: 0;
     }
-  }
+
+
+
+    @media only screen and (max-width: 600px) {
+        html {
+            width: 100vw;
+            right: 0;
+        }
+
+        body {
+            width: 100%;
+        }
+
+        .policy-doc {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            margin: 24px;
+        }
+
+        footer {
+            position: relative;
+            top: 300px;
+            bottom: 0;
+        }
+    }
