@@ -8,6 +8,7 @@
         justify-content: center;
         align-items: center;
         gap: 24px;
+        margin: 24px;
     }
 
     .download {
@@ -41,7 +42,6 @@
 
     footer {
         position: relative;
-        top: 100px;
         bottom: 0;
     }
 
@@ -69,7 +69,7 @@
 
         footer {
             position: relative;
-            top: 300px;
+            /* top: 300px; */
             bottom: 0;
         }
     }
