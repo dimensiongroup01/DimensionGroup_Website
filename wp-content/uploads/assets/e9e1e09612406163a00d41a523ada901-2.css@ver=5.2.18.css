@@ -6510,7 +6510,6 @@ body .wrapper-outer>.wrapper>.header-outer~div {
 .site-navigator .menu-item-link {
     color: #323232
 }
-
 .site-navigator .menu-item-link:hover {
     color: #379bd6
 }
@@ -6520,6 +6519,7 @@ body .wrapper-outer>.wrapper>.header-outer~div {
     background: #fff;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.09)
 }
+
 
 .site-navigator .menu-default .menu-item-has-children>a {
     position: relative
@@ -6841,7 +6841,7 @@ body .wrapper-outer>.wrapper>.header-outer~div {
 
 @keyframes width_sidebar_icon {
     0% {
-        %border-right-width: 0
+        border-right-width: 0
     }
 
     100% {
@@ -7278,7 +7278,7 @@ body.admin-bar .hb-menu-outer .sidebar-style {
     z-index: 99999;
     border-bottom: 1px solid rgba(204, 204, 204, 0.2);
     overflow-x: scroll;
-    max-height: 700px;
+    max-height: 500px;
     display: none;
     overflow-scrolling: touch;
     -o-overflow-scrolling: touch;
@@ -10815,7 +10815,7 @@ div[itemprop="description"] ul {
 }
 
 .maintenance.maintenance-style-1 .maintenance-title {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 70px;
     color: #323232;
     text-transform: uppercase;

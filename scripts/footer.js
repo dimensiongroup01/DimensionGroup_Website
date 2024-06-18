@@ -1,6 +1,6 @@
 window.onload = function () {
   let footer = document.getElementById("footer");
-  footer.innerHTML = `<div class="top">
+  footer.innerHTML = `<div class="top" style="font-weight:400;">
   <div class="top-inner">
     <div class="row">
       <div class="cm-3 w800-6 cxs-12">
@@ -90,6 +90,10 @@ window.onload = function () {
               <li id="menu-item-405"
                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-405">
                 <a href="gallery.html">Gallery</a>
+              </li>
+              <li id="menu-item-405"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-405">
+                <a target=_blank href="./wp-content/uploads/2024/Investor Grievance_DFS.pdf">Investor Grievance</a>
               </li>
             </ul>
           </div>
