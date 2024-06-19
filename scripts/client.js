@@ -29,7 +29,6 @@ const timeMinute = today.getMinutes();
 const timeSecond = today.getSeconds();
 const userID =
   `${month}` + `${date}` + `${timeHour}` + `${timeMinute}` + `${timeSecond}`;
-console.log(userID);
 
 // Create a reference with the userID as the key
 const userRef = ref(database, `client/${userID}`);
@@ -51,6 +50,40 @@ let mail = document.getElementById("mail");
 let name = document.getElementById("name");
 let number = document.getElementById("number");
 let nextButton = document.getElementById("next");
+nextButton.style.display = "none";
+mail.addEventListener("input", function () {
+  if (
+    mail.value.trim() !== "" &&
+    name.value.trim() !== "" &&
+    number.value.trim() !== ""
+  ) {
+    nextButton.style.display = "inline-block";
+  } else {
+    nextButton.style.display = "none";
+  }
+});
+name.addEventListener("input", function () {
+  if (
+    mail.value.trim() !== "" &&
+    name.value.trim() !== "" &&
+    number.value.trim() !== ""
+  ) {
+    nextButton.style.display = "inline-block";
+  } else {
+    nextButton.style.display = "none";
+  }
+});
+number.addEventListener("input", function () {
+  if (
+    mail.value.trim() !== "" &&
+    name.value.trim() !== "" &&
+    number.value.trim() !== ""
+  ) {
+    nextButton.style.display = "inline-block";
+  } else {
+    nextButton.style.display = "none";
+  }
+});
 
 function submitClientData() {
   const userData = {
@@ -92,6 +125,4 @@ submitButton.addEventListener("click", submitClientData);
 //   }
 // }, 4000);
 
-
 console.log(window.location.hostname);
-

@@ -170,7 +170,7 @@
      height: 10px;
      background-image: linear-gradient(60deg, #0CC4A3, #00A1F9);
      width: 0;
-     animation: grow 3s forwards ease-in;
+     animation: grow 12s forwards ease-in-out;
  }
 
  @keyframes grow {
