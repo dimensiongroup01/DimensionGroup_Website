@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="google-site-verification" content="oX-7fQzF7De03-DXYTSb4Mxx7s4zreEWLznqMNj8sjQ" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom-style.css">
     <link rel="stylesheet" href="css/annual-report.css">
     <link rel="alternate" type="application/rss+xml" title="ROR" href="https://www.dimensiongroup.co.in/ror.xml" />
     <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Link index CSS Stylesheet -->
     <link rel="stylesheet" href="dropdown.css">
     <link rel="stylesheet" href="./css/investorcorner/policies.css">
@@ -84,6 +85,10 @@
     <link rel="alternate" type="application/rss+xml" title="Dimension Group &raquo; Feed" href="feed/index.html" />
     <link rel="alternate" type="application/rss+xml" title="Dimension Group &raquo; Comments Feed"
         href="comments/feed/index.html" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
     <script type="text/javascript">
         window._wpemojiSettings = {
             baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/",
@@ -316,288 +321,73 @@
 
 <body
     class="home page-template-default page page-id-156 woocommerce-no-js unselectable mask wr-desktop vc-activated wpb-js-composer js-comp-ver-5.7 vc_responsive"
-    itemscope="itemscope" itemtype="http://schema.org/WebPage" >
+    itemscope="itemscope" itemtype="http://schema.org/WebPage">
     <div class="wrapper-outer">
         <div class="wrapper" ">
-            <div class="header-outer clear inherit" data-id="356" role="banner" itemscope="itemscope"
-                itemtype="http://schema.org/WPHeader">
-                <!-- Navbar End -->
-                <header id="navbar" class="header clear horizontal-layout">
-                    <!-- new navbar Start -->
-                    <!-- <div class="container-fluid bg-secondary ps-5 pe-0 d-none d-lg-block">
-          <div class="row gx-0">
-            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
-              <div class="d-inline-flex align-items-center">
-                <a class="text-body py-2 pe-3 border-end" href=""><small>FAQs</small></a>
-                <a class="text-body py-2 px-3 border-end" href=""><small>Support</small></a>
-                <a class="text-body py-2 px-3 border-end" href=""><small>Privacy</small></a>
-                <a class="text-body py-2 px-3 border-end" href=""><small>Policy</small></a>
-                <a class="text-body py-2 ps-3" href=""><small>Career</small></a>
-              </div>
-            </div>
-            <div class="col-md-6 text-center text-lg-end">
-              <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
-                <div class="me-3 pe-3 border-end py-2">
-                  <p class="m-0"><i class="fa fa-envelope-open me-2"></i>info@example.com</p>
+            <nav class=" navbar navbar-expand-lg navbar-light bg-white ps-3 pe-3 sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="wp-content/uploads/2019/05/dimesnion-logo-s.png" class="logo"
+                        alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="service.html">Service</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Invest
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item custom-bg" href="provident-fund.html">Provident Fund</a>
+                                </li>
+                                <li><a class="dropdown-item custom-bg" href="bond.html">Bonds & Debentures</a></li>
+                                <li><a class="dropdown-item custom-bg" href="mutual-fund.html">Mutual Funds</a></li>
+                                <li><a class="dropdown-item custom-bg" href="fixed-deposit.html">Fixed Deposits</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="group-companies.html">Group Companies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="business-partner.html">Business Partners</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Investor Corner
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item custom-bg" href="annual-return.html">Annual Return</a></li>
+                                <li><a class="dropdown-item custom-bg" href="policies.html">Policies</a></li>
+                                <li><a class="dropdown-item custom-bg" href="codeofconduct.html">Code of Conduct</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <a href="" class="nav-link"><button class="btn ps-3 pe-3 pt-2 pb-2"
+                                style="font-weight: 600; background-color: #07447D; color: white;">Check
+                                KYC</button></a>
+
+
+                        <a href="" class="nav-link"><button class="btn ps-3 pe-3 pt-2 pb-2"
+                                style="font-weight: 600; background-color: #07447D; color: white;">Invest
+                                Online</button></a>
+
+                    </ul>
+
                 </div>
-                <div class="py-2">
-                  <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</p>
-                </div>
-              </div>
             </div>
-          </div>
-        </div> -->
-
-                    <!-- Navbar  -->
-                    <!-- <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0" style="position: sticky;">
-          <a href="index.html" class="navbar-brand p-0">
-            <h1 class="m-0 text-uppercase text-primary"><i class="far fa-smile text-primary me-2"></i>consult</h1>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-0 me-n3">
-              <a href="index.html" class="nav-item nav-link">Home</a>
-              <a href="about.html" class="nav-item nav-link active">About</a>
-              <a href="service.html" class="nav-item nav-link">Service</a>
-              <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                <div class="dropdown-menu m-0">
-                  <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                  <a href="detail.html" class="dropdown-item">Blog Detail</a>
-                  <a href="feature.html" class="dropdown-item">Features</a>
-                  <a href="quote.html" class="dropdown-item">Quote Form</a>
-                  <a href="team.html" class="dropdown-item">The Team</a>
-                  <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                </div>
-              </div>
-              <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-          </div>
-        </nav> -->
-                    <!-- new navbar End -->
-
-                    <div class="hb-section-outer clear">
-                        <div class="clear hb-section section-1">
-                            <div class="container clear">
-                                <div class="element-item hb-text hb-s1i1">
-                                    <div class="content-text">
-                                        <p><i class="fa fa-phone"></i> 011-4565 1914</p>
-                                    </div>
-                                </div>
-                                <div class="element-item hb-text hb-s1i2">
-                                    <div class="content-text">
-                                        <p>
-                                            <i class="fa fa-envelope"></i> info@dimensiongroup.co.in
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="element-item hb-flex"></div>
-                                <div class="element-item hb-text hb-s1i4">
-                                    <div class="content-text">
-                                        <p>
-                                            <i class="fa fa-clock-o"></i> Mon - Sat: 09:30 - 18:00
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="element-item hb-menu hb-s1i5 text-layout" data-animation="scale"
-                                    data-margin-top="empty">
-                                    <div role="navigation" itemscope="itemscope"
-                                        itemtype="http://schema.org/SiteNavigationElement"
-                                        class="site-navigator-outer hb-s1i5 default-hover not-submenu">
-                                        <div class="navigator-column">
-                                            <div class="navigator-column-inner">
-                                                <div class="site-navigator-inner not-submenu">
-                                                    <ul class="site-navigator">
-                                                        <li
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-default menu-item-lv0">
-                                                            <a href="about.html" class="menu-item-link icon-left"><span
-                                                                    class="menu_title">About
-                                                                    Us</span></a>
-                                                        </li>
-                                                        <li
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-default menu-item-lv0">
-                                                            <a href="gallery.html"
-                                                                class="menu-item-link icon-left"><span
-                                                                    class="menu_title">Gallery</span></a>
-                                                        </li>
-                                                        <li
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-default menu-item-lv0">
-                                                            <a href="career.html" class="menu-item-link icon-left"><span
-                                                                    class="menu_title">Careers</span></a>
-                                                        </li>
-                                                        <li
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-default menu-item-lv0">
-                                                            <a href="contact.html"
-                                                                class="menu-item-link icon-left"><span
-                                                                    class="menu_title">Contact
-                                                                    Us</span></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hb-section-outer clear">
-                        <div data-height="0" class="sticky-row sticky-normal">
-                            <div class="clear hb-section section-2">
-                                <div class="container clear nav-bar">
-                                    <div class="element-item hb-logo hb-s2i1 image-type">
-                                        <div class="content-logo" style="margin-left: 90px;">
-                                            <a href="index.html"><img width="200" height="10"
-                                                    class="logo-origin logo-retina-hide"
-                                                    src="wp-content/uploads/2019/05/dimesnion-logo-s.png"
-                                                    alt="Dimension Group" /><img width="180" height="10"
-                                                    class="logo-sticky logo-retina-hide"
-                                                    src="wp-content/uploads/2019/05/dimesnion-logo-s.png"
-                                                    alt="Dimension Group" /><img width="200" height="10"
-                                                    class="logo-origin logo-retina-show"
-                                                    src="wp-content/uploads/2019/05/dimesnion-logo-s.png"
-                                                    alt="Dimension Group" /><img width="180" height="10"
-                                                    class="logo-sticky logo-retina-show"
-                                                    src="wp-content/uploads/2019/05/dimesnion-logo-s.png"
-                                                    alt="Dimension Group" /></a>
-                                        </div>
-                                    </div>
-                                    <div class="element-item hb-flex"></div>
-                                    <div class="element-item hb-menu hb-s2i3 text-layout" data-animation="scale"
-                                        data-margin-top="empty">
-                                        <div role="navigation" itemscope="itemscope"
-                                            itemtype="http://schema.org/SiteNavigationElement"
-                                            class="site-navigator-outer hb-s2i3 default-hover not-submenu">
-                                            <div class="navigator-column">
-                                                <div class="navigator-column-inner">
-                                                    <div class="site-navigator-inner not-submenu">
-                                                        <ul class="site-navigator">
-                                                            <li
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-156 current_page_item menu-default menu-item-lv0">
-                                                                <a href="index.html"
-                                                                    class="menu-item-link icon-left"><span
-                                                                        class="menu_title">Home</span></a>
-                                                            </li>
-
-                                                            <li
-                                                                class="menu-item menu-item-type-post_type me nu-item-object-page menu-default menu-item-lv0">
-                                                                <a href="service.html"
-                                                                    class="menu-item-link icon-left"><span
-                                                                        class="menu_title">Services</span></a>
-                                                            </li>
-                                                            <!-- Drop down list -->
-                                                            <li
-                                                                class="down-menu menu-item menu-item-type-post_type menu-item-object-page menu-default menu-item-lv0">
-                                                                <a class="menu-item-link icon-left"><span
-                                                                        class="menu_title">Invest</span> <img
-                                                                        src="wp-content/uploads/assets/down-arrow.svg"
-                                                                        style="height: 10px; width: 10px;">
-                                                                </a>
-                                                                <div class="dropdown-content">
-                                                                    <a class="menu_title drop-element"
-                                                                        href="provident-fund.html">Provident Fund</a>
-                                                                    <a class="menu_title drop-element"
-                                                                        href="bond.html">Bonds/Debentures</a>
-                                                                    <a class="menu_title drop-element"
-                                                                        href="mutual-fund.html">Mutual Funds</a>
-                                                                    <a class="menu_title drop-element"
-                                                                        href="fixed-deposit.html">Fixed Deposits</a>
-                                                                </div>
-                                                            </li>
-
-                                                            <li
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-default menu-item-lv0">
-                                                                <a href="group-companies.html"
-                                                                    class="menu-item-link icon-left"><span
-                                                                        class="menu_title">Group Companies</span></a>
-                                                            </li>
-                                                            <li
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-default menu-item-lv0">
-                                                                <a href="business-partner.html"
-                                                                    class="menu-item-link icon-left"><span
-                                                                        class="menu_title">Business Partners</span></a>
-                                                            </li>
-                                                            <li
-                                                                class="down-menu menu-item menu-item-type-post_type menu-item-object-page menu-default menu-item-lv0">
-                                                                <a class="menu-item-link icon-left"><span
-                                                                        class="menu_title">Investor corner</span> <img
-                                                                        src="wp-content/uploads/assets/down-arrow.svg"
-                                                                        style="height: 10px; width: 10px;">
-                                                                </a>
-                                                                <div class="dropdown-content">
-                                                                    <a class="menu_title drop-element"
-                                                                        href="annual-return.html">Annual Retrurn</a>
-                                                                    <a class="menu_title drop-element"
-                                                                        href="mutual-fund.html">Policies</a>
-                                                                    <a class="menu_title drop-element"
-                                                                        href="codeofconduct.html">Code of Conduct</a>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="element-item hb-menu hb-s2i4 text-layout" data-animation="scale"
-                                        data-margin-top="empty" style="margin-right: 7px;">
-                                        <div role="navigation" itemscope="itemscope"
-                                            itemtype="http://schema.org/SiteNavigationElement"
-                                            class="site-navigator-outer hb-s2i4 default-hover not-submenu">
-                                            <div class="navigator-column">
-                                                <div class="navigator-column-inner">
-                                                    <div class="site-navigator-inner not-submenu">
-                                                        <ul class="site-navigator">
-                                                            <li
-                                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-default menu-item-lv0">
-                                                                <a target="_blank" href="https://camskra.com/"
-                                                                    class="menu-item-link icon-left"><span
-                                                                        class="menu_title">Check KYC</span></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="element-item hb-menu hb-s2i4 text-layout" data-animation="scale"
-                                        data-margin-top="empty">
-                                        <div role="navigation" itemscope="itemscope"
-                                            itemtype="http://schema.org/SiteNavigationElement"
-                                            class="site-navigator-outer hb-s2i4 default-hover not-submenu">
-                                            <div class="navigator-column">
-                                                <div class="navigator-column-inner">
-                                                    <div class="site-navigator-inner not-submenu">
-                                                        <ul class="site-navigator">
-                                                            <li
-                                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-default menu-item-lv0">
-                                                                <a target="_blank" href="signup.html"
-                                                                    class="menu-item-link icon-left"><span
-                                                                        class="menu_title">Invest Online</span></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="element-item hb-social hb-s2i5 none-style small-size">
-                                        <a class="wr-color-hover-facebook" href="https://www.facebook.com/dimension.dg"
-                                            title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a><a
-                                            class="wr-color-hover-twitter" href="https://twitter.com/hr_dimension"
-                                            title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a><a
-                                            class="wr-color-hover-linkedin"
-                                            href="https://www.linkedin.com/in/dimension-group-85a90836/"
-                                            title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-            </div>
+            </nav>
             <div class="main">
                 <div class="top-backimage"
                     style="background-image: url('./wp-content/uploads/2024/policies.jpg');background-size: cover;background-repeat: no-repeat; background-position: center;">
@@ -626,7 +416,6 @@
             </div>
             <footer id="footer" class="footer" role="contentinfo" itemscope="itemscope"
                 itemtype="http://schema.org/WPFooter" style="position: relative;">
-
             </footer>
             <!-- .footer -->
         </div>
@@ -743,136 +532,7 @@
     <script type="text/javascript">
         var nitro_lazy_load_sources = [];
     </script>
-    <!-- <script type="application/ld+json">
-      {
-      
-        "@context": "http:\/\/schema.org\/",
-        "@type": "ImageGallery",
-        "associatedMedia": [
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/MD_with_R.jpg",
-            "name": "MD_with_R"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/FORTIS.jpg",
-            "name": "FORTIS"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/BHEL.jpg",
-            "name": "BHEL"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/MTNL.jpg",
-            "name": "MTNL"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/IREDA.png",
-            "name": "IREDA"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/SAIL.jpg",
-            "name": "SAIL"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/HAL.jpg",
-            "name": "HAL"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/NHDC.jpg",
-            "name": "NHDC"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/DELPHI-e1558015931635.jpg",
-            "name": "DELPHI"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/ICSI-e1558015994247.jpg",
-            "name": "ICSI"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/ITDC.jpg",
-            "name": "ITDC"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/HCL-e1558016051853.jpg",
-            "name": "HCL"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/MAX-e1558015978223.png",
-            "name": "MAX"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/NHPC-e1558016009725.jpg",
-            "name": "NHPC"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/Gallery_image_9.jpg",
-            "name": "Gallery_image_9"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/Gallery_image_14.jpg",
-            "name": "Gallery_image_14"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/Gallery_image_12.jpg",
-            "name": "Gallery_image_12"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/Gallery_image_13.jpg",
-            "name": "Gallery_image_13"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/Gallery_image_11.jpg",
-            "name": "Gallery_image_11"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/Gallery_image_2-1.jpg",
-            "name": "Gallery_image_2"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/Gallery_image_1.jpg",
-            "name": "Gallery_image_1"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/Gallery_image_4-1.jpg",
-            "name": "Gallery_image_4"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/Gallery_image_16.jpg",
-            "name": "Gallery_image_16"
-          },
-          {
-            "@type": "ImageObject",
-            "contentUrl": "https:\/\/www.dimensiongroup.co.in\/wp-content\/uploads\/2019\/05\/Gallery_image_17-1.jpg",
-            "name": "Gallery_image_17"
-          }
-        ]
-      }
-    </script> -->
-
+   
     <!-- Whatsapp Start Here -->
     <div class="whatsapp_main">
         <a href="https://wa.me/919650799561" target="_blank">
@@ -950,6 +610,7 @@
         }
     </script>
     <script src="scripts/hover.js"></script>
+
 </body>
 
 </html>

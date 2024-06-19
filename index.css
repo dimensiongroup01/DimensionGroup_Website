@@ -19,7 +19,7 @@
 
 @media only screen and (max-width: 600px) {
     #carouselExampleIndicators {
-        margin-top: 30%;
+        /* margin-top: 30%; */
     }
 }
 
@@ -2038,7 +2038,7 @@ html {
     background: #ffecec url("wp-content/plugins/wp-content-copy-protector/images/warning.png") no-repeat 10px 50%;
 }
 
-#NavBar{
+#NavBar {
     overflow: hidden;
 }
 
@@ -2046,4 +2046,4 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
-  }
+}
