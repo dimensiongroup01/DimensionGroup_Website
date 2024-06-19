@@ -129,7 +129,6 @@ window.onload = function () {
 `;
 };
 
-
 // <div id="wr-back-top">
 //   <a href="javascript:void(0);" class="heading-color hover-bg-primary dib overlay_bg nitro-line"
 //     title="Back to top"><i class="fa fa-angle-up"></i></a>

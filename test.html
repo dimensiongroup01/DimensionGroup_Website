@@ -2,171 +2,146 @@
 <html lang="en">
 
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/custom-style.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEST</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="hero.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <meta name="viewport" content="width=<div class=" element-item hb-menu hb-s2i3 text-layout" data-animation="scale"
+        data-margin-top="empty">
+    <title>Document</title>
 </head>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
 
-<body>
-    <div class="main-container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <img src="./wp-content/uploads/assets/" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<body style="height: 3000px;">
+
+    <!-- Navbar -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white ps-3 pe-3 sticky-top" style="position: -webkit-sticky;
+    position: sticky;
+    top: 0;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="logo" src="wp-content/uploads/2019/05/dimesnion-logo-s.png"
+                    alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="service.html">Service</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Invest
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item custom-bg" href="provident-fund.html">Provident Fund</a></li>
+                            <li><a class="dropdown-item custom-bg" href="bond.html">Bonds & Debentures</a></li>
+                            <li><a class="dropdown-item custom-bg" href="mutual-fund.html">Mutual Funds</a></li>
+                            <li><a class="dropdown-item custom-bg" href="fixed-deposit.html">Fixed Deposits</a></li>
+
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                        <a class="nav-link" href="group-companies.html">Group Companies</a>
                     </li>
-                </ul>
-            </div>
-        </nav>
+                    <li class="nav-item">
+                        <a class="nav-link" href="business-partner.html">Business Partners</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Investor Corner
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item custom-bg" href="annual-return.html">Annual Return</a></li>
+                            <li><a class="dropdown-item custom-bg" href="policies.html">Policies</a></li>
+                            <li><a class="dropdown-item custom-bg" href="codeofconduct.html">Code of Conduct</a></li>
+                        </ul>
+                    </li>
+                    <nav class="  navbar navbar-expand-lg sticky-top navbar-light bg-white ps-3 pe-3">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#"><img src="wp-content/uploads/2019/05/dimesnion-logo-s.png"
+                                    class="logo" alt=""></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="service.html">Service</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Invest
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item custom-bg" href="provident-fund.html">Provident
+                                                    Fund</a></li>
+                                            <li><a class="dropdown-item custom-bg" href="bond.html">Bonds &
+                                                    Debentures</a></li>
+                                            <li><a class="dropdown-item custom-bg" href="mutual-fund.html">Mutual
+                                                    Funds</a></li>
+                                            <li><a class="dropdown-item custom-bg" href="fixed-deposit.html">Fixed
+                                                    Deposits</a></li>
 
-        <div class="blob-container">
-            <div class="blob">eeee</div>    
-            <div class="hero-section">
-                <div class="inner-container">
-                    <div class="hero-text" id="hero-text">
-                        <p>Start your investment journey with</p>
-                        <span id="name" class="gradient-animate-text">Dimension Group</span>
-                        <div id="dimension-info">
-                            <p>Dimension Group is a well-corporate house, Incorporated & headquartered in Delhi
-                                financial
-                                services
-                                with a wide range products.</p>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="group-companies.html">Group Companies</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="business-partner.html">Business Partners</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Investor Corner
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item custom-bg" href="annual-return.html">Annual
+                                                    Return</a></li>
+                                            <li><a class="dropdown-item custom-bg" href="policies.html">Policies</a>
+                                            </li>
+                                            <li><a class="dropdown-item custom-bg" href="codeofconduct.html">Code of
+                                                    Conduct</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <a href="" class="nav-link"><button class="btn ps-3 pe-3 pt-2 pb-2"
+                                            style="font-weight: 600; background-color: #07447D; color: white;">Check
+                                            KYC</button></a>
+
+
+                                    <a href="" class="nav-link"><button class="btn ps-3 pe-3 pt-2 pb-2"
+                                            style="font-weight: 600; background-color: #07447D; color: white;">Invest
+                                            Online</button></a>
+
+                                </ul>
+
+                            </div>
                         </div>
-                        <span id="detail-text">Invest online in Bonds, Fixed Deposits & Mutual Funds</span>
-                    </div>
-                    <a href="#" id="hero-cta-link">
-                        <div class="gradient-animate-button" id="hero-cta">Bonds</div>
-                    </a>
-                </div>
-                <div class="graphic-container">
-                    <div class="blob"></div>
-                    <div class="hero-graphic">
-                        <img src="wp-content/uploads/assets/OBJECTS.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-down-div">
-            <div id="scroll-text">Scroll down</div>
-            <div id="scroll-shape">
-                <!-- <div id="arrow"> <img src="wp-content/uploads/assets/arrow.svg" alt=""></div>
-                 -->
-                <div id="arrow"></div>
-            </div>
-        </div>
+                    </nav>
 
-        <div class="clients">
-            <div id="clients">
-                <h2>
-                    Our Valuable Clients
-            </div>
-            </h2>
-            <div class="carousel-container">
-                <div class="carousel-slider">
-                    <div class="carousel-slider__item">
-                        <img width="266" height="100" src="wp-content/uploads/2019/05/FORTIS.jpg"
-                            class="attachment-full size-full" alt="" />
-                    </div>
-                    <div class="carousel-slider__item">
-                        <img width="240" height="100" src="wp-content/uploads/2019/05/BHEL.jpg"
-                            class="attachment-full size-full" alt="" />
-                    </div>
-                    <div class="carousel-slider__item">
-                        <img width="148" height="100" src="wp-content/uploads/2019/05/MTNL.jpg"
-                            class="attachment-full size-full" alt="" />
-                    </div>
-                    <div class="carousel-slider__item">
-                        <img width="195" height="100" src="wp-content/uploads/2019/05/IREDA.png"
-                            class="attachment-full size-full" alt="" />
-                    </div>
-                    <div class="carousel-slider__item">
-                        <img width="95" height="100" src="wp-content/uploads/2019/05/SAIL.jpg"
-                            class="attachment-full size-full" alt="" />
-                    </div>
-                    <div class="carousel-slider__item">
-                        <img width="184" height="100" src="wp-content/uploads/2019/05/HAL.jpg"
-                            class="attachment-full size-full" alt="" />
-                    </div>
-                    <div class="carousel-slider__item">
-                        <img width="113" height="100" src="wp-content/uploads/2019/05/NHDC.jpg"
-                            class="attachment-full size-full" alt="" />
-                    </div>
-                    <div class="carousel-slider__item">
-                        <img width="235" height="70" src="wp-content/uploads/2019/05/DELPHI-e1558015931635.jpg"
-                            class="attachment-full size-full" alt="" />
-                    </div>
-                    <div class="carousel-slider__item">
-                        <img width="244" height="70" src="wp-content/uploads/2019/05/ICSI-e1558015994247.jpg"
-                            class="attachment-full size-full" alt="" />
-                    </div>
-                    <div class="carousel-slider__item">
-                        <img width="194" height="100" src="wp-content/uploads/2019/05/ITDC.jpg"
-                            class="attachment-full size-full" alt="" />
-                    </div>
-                    <div class="carousel-slider__item">
-                        <img width="208" height="60" src="wp-content/uploads/2019/05/HCL-e1558016051853.jpg"
-                            class="attachment-full size-full" alt="" />
-                    </div>
-                    <div class="carousel-slider__item">
-                        <img width="232" height="80" src="wp-content/uploads/2019/05/MAX-e1558015978223.png"
-                            class="attachment-full size-full" alt="" />
-                    </div>
-                    <div class="carousel-slider__item">
-                        <img width="279" height="70" src="wp-content/uploads/2019/05/NHPC-e1558016009725.jpg"
-                            class="attachment-full size-full" alt="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script src="scripts/slider.js"></script>
+
+
+                    <!-- Bootstrap -->
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                        crossorigin="anonymous"></script>
 </body>
 
 </html>
