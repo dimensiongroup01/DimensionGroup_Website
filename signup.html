@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -15,48 +15,53 @@
 
 <body>
     <!-- multistep form -->
-    <form id="msform">
-        <!-- progressbar -->
-        <ul id="progressbar">
-            <li class="active">Account Setup</li>
-            <li>Account Details</li>
-            <li>Complete</li>
-        </ul>
-        <!-- fieldsets -->
-        <fieldset>
-            <h2 class="fs-title">Create your account</h2>
-            <h3 class="fs-subtitle">Your data is secure with us</h3>
-            <input id="name" type="text" name="Full Name" placeholder="Full Name" />
-            <input id="mail" type="email" name="email" placeholder="Email" />
-            <input id="number" type="number" name="number" placeholder="Mobile Number" />
-            <input id="next" type="button" name="next" class="next action-button" value="Next" />
-            <p style="margin: 16px;">Already member? <a style="color: #07447D; font-weight: bold;"
-                    href="https://dimensiongroup.investwell.app/app/#/login">Login</a> </p>
-        </fieldset>
-        <fieldset>
-            <h2 class="fs-title">Enter Your Details</h2>
-            <h3 class="fs-subtitle">Your data is secure with us</h3>
-            <input required id="pan" type="text" for="dropdown" name="PAN" placeholder="PAN detail"
-                style="text-transform: uppercase;" maxlength="10">
+    <div class="container-main">
+        <form id="msform" style="display: block;">
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active">Account Setup</li>
+                <li>Account Details</li>
+                <li>Complete</li>
+            </ul>
+            <!-- fieldsets -->
+            <fieldset>
+                <h2 class="fs-title">Create your account</h2>
+                <h3 class="fs-subtitle">Your data is secure with us</h3>
+                <input id="name" type="text" name="Full Name" placeholder="Full Name" />
+                <input id="mail" type="email" name="email" placeholder="Email" />
+                <input id="number" type="number" name="number" placeholder="Mobile Number" />
+                <input id="next" type="button" name="next" class="next action-button" value="Next" />
+                <p style="margin: 16px;">Already member? <a style="color: #07447D; font-weight: bold;"
+                        href="https://dimensiongroup.investwell.app/app/#/login">Login</a> </p>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Enter Your Details</h2>
+                <h3 class="fs-subtitle">Your data is secure with us</h3>
+                <input required id="pan" type="text" for="dropdown" name="PAN" placeholder="PAN detail"
+                    style="text-transform: uppercase;" maxlength="10">
 
-            <input type="button" name="previous" class="previous action-button" value="Previous" />
-            <input type="button" id="submit" name="next" class="next action-button" value="Submit" />
+                <input type="button" name="previous" class="previous action-button" value="Previous" />
+                <input type="button" id="submit" name="next" class="next action-button" value="Submit" />
 
-        </fieldset>
-        <fieldset>
-            <h2 class="fs-title">Account creation successful</h2>
-            <h3 class="fs-subtitle">We will contact you soon. In the meantime, please feel free to explore our website.
-            </h3>
-            <div id="progress"></div>
-            <p style="margin: 8px;"> Redirecting</p>
-        </fieldset>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Account creation successful</h2>
+                <h3 class="fs-subtitle">We will contact you soon. In the meantime, please feel free to explore our
+                    website.
+                    <br> Enter <span style="color: #07447D;font-weight: 600;">"Dimensiongroup"</span> as Domain for your
+                    portfolio when asked.
+                </h3>
+                <div id="progress"></div>
+                <p style="margin: 8px;"> Redirecting</p>
+            </fieldset>
 
-    </form>
-    <div class="tutorial">
-        <div class="glass">
+        </form>
+        <div class="tutorial">
+
             <div id="phone"></div>
         </div>
     </div>
+
     <script>
         var current_fs, next_fs, previous_fs; //fieldsets
         var left, opacity, scale; //fieldset properties which we will animate
@@ -86,7 +91,7 @@
                     opacity = 1 - now;
                     current_fs.css({
                         'transform': 'scale(' + scale + ')',
-                        'position': 'absolute'
+
                     });
                     next_fs.css({ 'left': left, 'opacity': opacity });
                 },
