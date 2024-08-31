@@ -2155,15 +2155,28 @@
                     </div>
 
                     <button id="calc-interest">Calculate</button>
-                    <div
-                      style="width : 100%;display: flex; justify-content: center;font-weight: 400; color: #212121; margin-top: 32px; font-size: 24px;"
-                      id="result"></div>
+                    
 
                   </div>
                   <div class="result-display">
-                    <div id="chartContainer">
-                      <canvas id="pieChart"></canvas>
+                    <div class="circle" id="circle">
+                      <div class="inner-circle" id="inner-circle">
+                        <div class="text" id="text"></div>
+                      </div>
                     </div>
+                    <div class="chart-details" style="display: flex;flex-direction: column; gap:16px;">
+                      <div class="detail-box" style="display: flex; align-items: center; gap: 12px;">
+                        <div class="label-box" style="background-color: #c1c1c1; "></div>
+                        <p id="interestAmount" style="margin: 0; color: #262626; font-weight: 400;"></p>
+                      </div>
+                      <div class="detail-box" style="display: flex; align-items: center; gap: 12px;">
+                        <div class="label-box" style="background-color: #379BD6; "></div>
+                        <p id="principalAmount" style="margin: 0; color: #262626; font-weight: 400;"></p>
+                      </div>
+                    </div>
+                    <div
+                      style="width : 100%;display: flex; justify-content: center;font-weight: 400; color: #212121;font-size: 24px;"
+                      id="result"></div>
                   </div>
                 </div>
               </div>

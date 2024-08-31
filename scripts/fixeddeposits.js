@@ -173,15 +173,13 @@ function initializeCalculator() {
   });
 }
 
-let interest, principal, totalAmount;
+let interest, principal
 let interestPieChart; // Declare interestPieChart outside the function to access it globally
 
 
 // Function to calculate interest
 function calculateInterest() {
-  let interestValue = [0];
-  let timeInMonths = [0];
-  const totalReturn = [0];
+  let totalReturn ;
 
   // Get input values
   principal = parseFloat(document.getElementById("principal").value);
@@ -202,23 +200,39 @@ function calculateInterest() {
   }
   let interestRate;
   // Calculate interest
-  for (let t = 12; t <= time; t += 6) {
-    interestRate = getInterestRate(bank, t) + womanRate + seniorCitizenRate;
-    let interest = (principal * interestRate * (t / 12)) / 100;
-    timeInMonths.push(t);
-    interestValue.push(interest);
-    totalReturn.push(principal + interest);
-  }
+  let interest;
+  // for (let t = 12; t <= time; t += 6) {
+  //   interestRate = getInterestRate(bank, t) + womanRate + seniorCitizenRate;
+  //   interest = (principal * interestRate * (t / 12)) / 100;
+  //   timeInMonths.push(t);
+  //   interestValue.push(interest);
+  //   totalReturn.push(principal + interest);
+  // }
+  interestRate = getInterestRate(bank, time) + womanRate + seniorCitizenRate;
+  interest = (principal * interestRate * (time / 12)) / 100;
+  totalReturn = principal + interest;
 
+
+  let principalDeg = ((principal/totalReturn)*100)*360/100;
+  console.log(principalDeg)
   let resultDiv = document.getElementById("result");
-  totalAmount = totalReturn[length];
-  resultDiv.innerHTML = `Total amount: ${totalReturn[
-    totalReturn.length - 1
-  ].toFixed(2)}` + ` (@` + `${interestRate.toFixed(2)}` + `%)`;
+  
+  resultDiv.innerHTML = `Total amount: ${totalReturn.toFixed(2)}`;
 
-  clearCanvas();
-  // Update the pie chart with the new values
-  createPieChart(interestValue, totalReturn, timeInMonths);
+  let circle = document.getElementById("circle");
+ circle.style.backgroundImage = `conic-gradient(#379BD6 ${principalDeg}deg, #c1c1c1 1deg)`
+  let text = document.getElementById("text")
+  let interestText = document.getElementById("interestAmount")
+  let principalText = document.getElementById("principalAmount")
+
+  text.innerText = `${interestRate.toFixed(2)}` + `%`
+  interestText.innerText = `Interest amount => Rs ${interest}`
+  principalText.innerText = `Principal amount => Rs ${principal}`
+
+
+  // clearCanvas();
+  // Update the pie chart with the new values 
+  // createPieChart(interestValue, totalReturn, timeInMonths);
 }
 
 // Function to get interest rate based on bank and time
@@ -359,6 +373,7 @@ function updatePieChart(principal, interest) {
     // Create new chart if it doesn't exist
     createPieChart(interestValue);
   }
+
 }
 
 function clearCanvas() {
