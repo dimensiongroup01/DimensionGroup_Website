@@ -76,7 +76,6 @@
 
 th {
     color: #1e1e1e;
-
 }
 
 tr>th,
@@ -98,7 +97,7 @@ tr>th {
 }
 
 tr>td:first-child {
-    color: #1e1e1e;
+    color: #1c1c1c;
     text-align: left;
     min-width: 80px;
     max-width: 120px;
@@ -124,7 +123,8 @@ td>a>div {
 
     .calc-container {
         width: 100%;
-        margin-bottom: 80px;
+        margin-bottom: 160px;
+        margin-top: 80px;
         height: 600px;
         display: flex;
         flex-direction: column;
@@ -145,8 +145,8 @@ td>a>div {
     }
 
     .calculator label {
-        color: #1e1e1e;
-        font-weight: bold;
+        color: #1a1a1a;
+        /* font-weight: bold; */
         font-size: 1.2rem;
         margin: 8px;
     }
@@ -242,7 +242,7 @@ td>a>div {
 
     .fd-heading {
         font-size: 24px;
-        font-weight: bold;
+        /* font-weight: bold; */
         color: #1e1e1e;
     }
 
@@ -274,7 +274,7 @@ td>a>div {
 
     .calculator label {
         color: #1e1e1e;
-        font-weight: bold;
+        /* font-weight: bold; */
         font-size: 1.2rem;
         margin: 8px;
     }

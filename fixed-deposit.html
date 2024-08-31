@@ -2075,25 +2075,16 @@
                 <div class="inner-view">
                   <div class="calculator">
                     <label for="principal">Original Amount:</label>
-                    <input type="number" id="principal" placeholder="Enter original amount" min="5000" max="1000000"
+                    <input type="number" id="principal" placeholder="Enter original amount" min="5000" max="10000000"
                       value="5000">
                     <!-- Set minimum limit to 5000 and maximum limit to 1,000,000 -->
-                    <input type="range" class="input-slider" id="slider" min="5000" max="1000000" step="1000"
+                    <input type="range" class="input-slider" id="slider" min="5000" max="10000000" step="1000"
                       value="5000">
                     <!-- Set minimum limit to 5000 and maximum limit to 1,000,000 -->
                     <label for="time" id="numberOfMonth"></label>
                     <input type="range" class="input-slider" id="time" min="12" max="60" step="6" value="12">
                     <!-- Set minimum limit to 5000 and maximum limit to 1,000,000 -->
 
-                    <!-- <select id="time">
-                      <option value="12">12 months</option>
-                      <option value="18">18 months</option>
-                      <option value="24">24 months</option>
-                      <option value="30">30 months</option>
-                      <option value="36">36 months</option>
-                      <option value="42">42 months</option>
-                      <option value="48">48 months</option>
-                    </select> -->
                     <label for="bank">Bank or Company:</label>
                     <select id="bank">
                       <option value="PNB">PNB</option>
@@ -2102,9 +2093,70 @@
                       <option value="Shriram">Shriram Transport</option>
                       <!-- Add more options as needed -->
                     </select>
+                    <!-- <div style="margin-top: 12px;">
+                      <div style="display: flex;justify-content: space-between;">
+                        <div>
+                          <label for="seniorCitizen">Are you a senior citizen?</label>
+                        </div>
+                        <div style="display: flex;justify-content: space-between;">
+                          <div>
+                            <input type="radio" id="seniorCitizenYes" name="seniorCitizen" value="yes">
+                            <label for="seniorCitizenYes">Yes</label>
+                          </div>
+                          <div>
+                            <input type="radio" id="seniorCitizenNo" name="seniorCitizen" value="no">
+                            <label for="seniorCitizenNo">No</label>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div style="display: flex;justify-content: space-between;">
+                        <label for="woman">Are you a woman?</label>
+                        <div style="display: flex;justify-content: space-between;">
+                          <div>
+                            <input type="radio" id="womanYes" name="woman" value="yes">
+                            <label for="womanYes">Yes</label>
+                          </div>
+                          <div>
+
+                            <input type="radio" id="womanNo" name="woman" value="no">
+                            <label for="womanNo">No</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+
+                    <div id="additional-rates" style="margin-top: 12px; display: none;">
+                      <div style="display: flex;flex-direction: column; gap:0;">
+                        <div style="display: flex; justify-content: space-between;">
+                          <div>
+                            <label style="" for="seniorCitizen">Are you a senior citizen? </label>
+                          </div>
+                          <div style="display: flex; justify-content: space-between;">
+                            <input type="checkbox" id="seniorCitizen" name="seniorCitizen">
+                          </div>
+                        </div>
+                        <div style="margin: 0 8px; color: #379BD6;">
+                          (additional 0.50%* p.a. interest rate)
+                        </div>
+                      </div>
+                      <div>
+                        <div style="display: flex; justify-content: space-between;">
+                          <label for="woman">Are you a woman?</label>
+                          <div style="display: flex; justify-content: space-between;">
+                            <input type="checkbox" id="woman" name="woman">
+                          </div>
+                        </div>
+                        <div style="margin: 0 8px; color: #379BD6;">
+                          (additional 0.10%* p.a. interest rate)
+                        </div>
+                      </div>
+                    </div>
+
                     <button id="calc-interest">Calculate</button>
                     <div
-                      style="width : 100%;display: flex; justify-content: center;font-weight: 600; color: #333333; margin-top: 32px; font-size: 24px;"
+                      style="width : 100%;display: flex; justify-content: center;font-weight: 400; color: #212121; margin-top: 32px; font-size: 24px;"
                       id="result"></div>
 
                   </div>

@@ -91,6 +91,20 @@ let rateData = {
 
 let type = "Cumulative";
 let objectName = Object.keys(rateData)[0];
+let additionalRate = document.getElementById("additional-rates");
+let bank = document.getElementById("bank")
+let seniorCitizenRate = 0;
+let womanRate = 0;
+bank.addEventListener("change", () => {
+  if (bank.value == "Shriram") {
+    additionalRate.style.display = "block"
+  } else {
+    additionalRate.style.display = "none"
+    seniorCitizenRate = 0;
+    womanRate = 0;
+    console.log(womanRate)
+  }
+})
 
 function updateTable(type, rateData) {
   // console.log(type);
@@ -162,6 +176,7 @@ function initializeCalculator() {
 let interest, principal, totalAmount;
 let interestPieChart; // Declare interestPieChart outside the function to access it globally
 
+
 // Function to calculate interest
 function calculateInterest() {
   let interestValue = [0];
@@ -172,6 +187,8 @@ function calculateInterest() {
   principal = parseFloat(document.getElementById("principal").value);
   let time = parseInt(document.getElementById("time").value);
   let bank = document.getElementById("bank").value;
+
+
   // Validate input against maximum limit
   let maxLimit = parseFloat(
     document.getElementById("principal").getAttribute("max")
@@ -183,24 +200,21 @@ function calculateInterest() {
     alert("Amount not in valid limit");
     return;
   }
+  let interestRate;
   // Calculate interest
   for (let t = 12; t <= time; t += 6) {
-    let interestRate = getInterestRate(bank, t);
+    interestRate = getInterestRate(bank, t) + womanRate + seniorCitizenRate;
     let interest = (principal * interestRate * (t / 12)) / 100;
     timeInMonths.push(t);
     interestValue.push(interest);
     totalReturn.push(principal + interest);
   }
-  // console.log(totalReturn);
-  // Display result
+
   let resultDiv = document.getElementById("result");
-  // console.log(totalReturn.length);
   totalAmount = totalReturn[length];
-  // console.log(totalAmount);
   resultDiv.innerHTML = `Total amount: ${totalReturn[
     totalReturn.length - 1
-  ].toFixed(2)}`;
-  // console.log(timeInMonths, interestValue);
+  ].toFixed(2)}` + ` (@` + `${interestRate.toFixed(2)}` + `%)`;
 
   clearCanvas();
   // Update the pie chart with the new values
@@ -263,6 +277,29 @@ function getInterestRate(bank, time) {
 }
 
 initializeCalculator();
+let seniorCitizen = document.getElementById("seniorCitizen");
+let woman = document.getElementById("woman");
+
+if (seniorCitizen) {
+  seniorCitizen.addEventListener("change", () => {
+    if (seniorCitizen.checked) {
+      seniorCitizenRate = 0.5
+    } else {
+      seniorCitizenRate = 0
+    }
+  })
+}
+
+if (woman) {
+  woman.addEventListener("change", () => {
+    if (woman.checked) {
+      womanRate = 0.1
+    } else {
+      womanRate = 0.0
+    }
+  })
+}
+
 
 let principalInput = document.getElementById("principal");
 let slider = document.getElementById("slider");
@@ -279,7 +316,6 @@ function createPieChart(interestValue, totalReturn, timeInMonths) {
     interestPieChart.destroy();
   }
   // console.log(principal, interest);
-
   interestPieChart = new Chart(ctx, {
     type: "line",
     fill: true,
