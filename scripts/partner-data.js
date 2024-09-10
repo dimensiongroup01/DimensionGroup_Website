@@ -1,10 +1,12 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
 import {
     getDatabase,
     ref,
     set,
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
-import { getStorage } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyAwAyhn4kyD5PZNE00-tWwww6oLRy3mp2U",
     authDomain: "client-data-22e7f.firebaseapp.com",
@@ -18,7 +20,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-const storage = getStorage(app);
 
 let firstName = document.getElementById("wpforms-1251-field_0");
 let middleName = document.getElementById("wpforms-1251-field_0-middle");
@@ -171,7 +172,7 @@ additionalInfoInput.addEventListener("input", function () {
 })
 
 submitButton.addEventListener("click", () => {
-    console.log();
+    console.log("Clicked");
 
     const today = new Date();
     const month = today.getMonth() + 1;
@@ -208,33 +209,13 @@ submitButton.addEventListener("click", () => {
         additionalInfoInput: additionalInfoInputValue,
     };
 
-    console.log(userID)
-    // function uploadFilesToFirebase() {
-    //     const fileInput = document.getElementById("wpforms-1251-field_23").files[0];
-    //     let fileName = fileInput.name
-    //     console.log(fileName)
-    //     const storageRef = ref(storage, fileName);
-    //     const uploadTask = uploadBytesResumable(storageRef, fileInput);
-    //     uploadTask.on(
-    //         "state_changed",
-    //         (snapshot) => {
-    //             reload(snapshot);
-    //         },
-    //         (error) => {
-    //             console.log("Error:" + error);
-    //         },
-    //         () => {
-    //             console.log("extra");
-    //         }
-    //     );
-    // }
-
-    // uploadFilesToFirebase()
+    console.log(firstNameValue, lastNameValue)
 
     set(userRef, userData)
         .then(() => {
             console.log("submitted");
             console.log(userID)
+            console.log(userData)
         })
         .catch((error) => {
             console.log("error:", error);
