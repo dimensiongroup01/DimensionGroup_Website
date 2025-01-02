@@ -100,33 +100,18 @@
 }
 
 .pic:hover {
-    animation: size-change 0.3s both ease-in-out;
+    animation: size-change 0.5s both ease;
 }
 
 @keyframes size-change {
     0% {
+        scale: 1;
         border-radius: 0px;
     }
 
     100% {
         border-radius: 12px;
-        filter: grayscale(30%);
+        /* filter: grayscale(30%); */
+        scale: 0.8;
     }
-}
-
-.pic::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 98, 255, 0.224); /* Default semi-transparent overlay */
-    opacity: 0;
-    transition: opacity 0.3s ease; /* Smooth fade effect */
-    border-radius: 12px;
-}
-
-.pic:hover::after {
-    opacity: 1; /* Overlay becomes visible on hover */
 }
