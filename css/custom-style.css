@@ -19,5 +19,114 @@
 @media only screen and (max-width: 600px) {
     .logo {
         height: 50px;
-    } 
+    }
+}
+
+.leader-pics {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.pic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    /* Prevents overflow if content is larger */
+}
+
+.pic {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    /* Ensures the image retains a square shape */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+
+}
+
+#pic-one {
+    background-image: url('./../wp-content/uploads/2025/RM1516571437701.jpeg');
+}
+
+#pic-two {
+    background-image: url('./../wp-content/uploads/2025/PM_DSC2018.JPG');
+}
+
+#pic-three {
+    background-image: url('./../wp-content/uploads/2025/VG1735713091693.jpg');
+}
+
+#pic-four {
+    background-image: url('./../wp-content/uploads/2025/CK11322837176.jpeg');
+}
+#pic-five {
+    background-image: url('./../wp-content/uploads/2025/SP239c084e-4ba4-4ef8-b90e-d4f53b83ff80.jpeg');
+}
+
+#pic-six {
+    background-image: url('./../wp-content/uploads/2025/VK8421809b-6f4a-49a1-8e5c-4594602d3e0d.jpeg');
+    background-position: top;
+}
+
+
+@media (max-width: 1000px) {
+    .leader-pics {
+        grid-template-columns: repeat(2,1fr);
+        /* Switch to single column layout */
+    }
+
+    .pic {
+        /* width: 100%; */
+        aspect-ratio: auto;
+         height: 300px;
+        width: 300px; 
+        background-size: cover;
+        /* Ensures the image scales properly */
+    }
+}
+
+.pic-details {
+    font-size: 20px;
+    color: rgb(42, 42, 42);
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.pic:hover {
+    animation: size-change 0.3s both ease-in-out;
+}
+
+@keyframes size-change {
+    0% {
+        border-radius: 0px;
+    }
+
+    100% {
+        border-radius: 12px;
+        filter: grayscale(30%);
+    }
+}
+
+.pic::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 98, 255, 0.224); /* Default semi-transparent overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth fade effect */
+    border-radius: 12px;
+}
+
+.pic:hover::after {
+    opacity: 1; /* Overlay becomes visible on hover */
 }
