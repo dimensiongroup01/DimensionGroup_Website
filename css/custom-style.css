@@ -25,7 +25,7 @@
 .leader-pics {
     margin-top: 24px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
     margin-bottom: 32px;
 }
@@ -93,8 +93,8 @@
 }
 
 .pic-details {
-    font-size: 20px;
-    color: rgb(42, 42, 42);
+    font-size: 18px;
+    color: rgb(48, 48, 48);
     font-weight: 600;
     margin-top: 8px;
 }
