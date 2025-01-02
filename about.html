@@ -1853,7 +1853,7 @@
                                 <div class="pic-details">Prachi Mathur</div>
                                 <div class="pic-details">Director </div>
                               </div>
-                            
+
                             </div>
                           </div>
                         </div>
@@ -1882,6 +1882,7 @@
                               <div class="pic-container">
                                 <div class="pic" id="pic-five"> </div>
                                 <div class="pic-details">Supriya Shamra</div>
+
                                 <!-- <div class="pic-details">Key Managerial Personnel </div> -->
                               </div>
                               <div class="pic-container">
@@ -1889,7 +1890,7 @@
                                 <div class="pic-details">Vishal Kumar Lal</div>
                                 <!-- <div class="pic-details">Key Managerial Personnel</div> -->
                               </div>
-                             
+
                             </div>
                           </div>
                         </div>
@@ -1898,8 +1899,6 @@
                   </div>
                 </div>
               </div>
-
-
               <div class="container">
                 <div class="vc_row wpb_row vc_row-fluid">
                   <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -2436,6 +2435,17 @@
     src="wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js@ver=5.7"></script>
   <script type="text/javascript">
     var nitro_lazy_load_sources = [];
+  </script>
+   <script>
+    let picContainer = document.querySelectorAll(".pic-container");
+    let urls = ["#", "https://www.linkedin.com/in/ravi-kant-mathur-b9990a15/", "https://www.linkedin.com/in/prachi-mathur-26490b36/", "", "https://www.linkedin.com/in/supriya-sharma-a0012075/", "https://www.linkedin.com/in/vishalkmrlal/"]
+    console.log(urls)
+    picContainer.forEach(pic => {
+      pic.addEventListener("click", () => {
+        let index = Array.from(picContainer).indexOf(pic);
+        window.open(urls[index]);
+      });
+    });
   </script>
 
 </body>
