@@ -52,7 +52,7 @@
 }
 
 #pic-one {
-    background-image: url('./../wp-content/uploads/2025/RM1516571437701.jpeg');
+    background-image: url('./../wp-content/uploads/2025/ld-rm.png');
 }
 
 #pic-two {
@@ -66,6 +66,7 @@
 #pic-four {
     background-image: url('./../wp-content/uploads/2025/CK11322837176.jpeg');
 }
+
 #pic-five {
     background-image: url('./../wp-content/uploads/2025/SP239c084e-4ba4-4ef8-b90e-d4f53b83ff80.jpeg');
 }
@@ -78,15 +79,15 @@
 
 @media (max-width: 1000px) {
     .leader-pics {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         /* Switch to single column layout */
     }
 
     .pic {
         /* width: 100%; */
         aspect-ratio: auto;
-         height: 300px;
-        width: 300px; 
+        height: 300px;
+        width: 300px;
         background-size: cover;
         /* Ensures the image scales properly */
     }
@@ -113,5 +114,189 @@
         border-radius: 12px;
         /* filter: grayscale(30%); */
         scale: 0.8;
+    }
+}
+
+#ldr-img-1 {
+    background-image: url('./../wp-content/uploads/2025/ld-rm.png');
+}
+
+#ldr-img-2 {
+    background-image: url('./../wp-content/uploads/2025/ld-pm.png');
+}
+
+#ldr-img-3 {
+    background-image: url('./../wp-content/uploads/2025/ld-vg.png');
+}
+
+.ldr {
+    height: auto;
+    width: 100%;
+    /* padding: 0 16px; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.ldr-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Card */
+.ldr-cover {
+    width: 100%;
+    max-width: 265px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hover-icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.connect {
+    position: absolute;
+    bottom: 24px;
+    z-index: 1000;
+    background-color: #0077B5;
+    padding: 6px 12px;
+    color: white;
+}
+
+.connect:hover {
+    background-color: #07447D;
+}
+
+/* Circular Image Initially */
+@keyframes circle {
+    0% {
+        clip-path: circle(35% at center);
+    }
+
+    100% {
+        clip-path: circle(100% at center);
+    }
+}
+
+/* Default state */
+.ldr-cover {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    clip-path: circle(35% at center);
+    transition: clip-path 0.4s ease-in-out;
+    /* width: 100%;
+        height: auto; */
+    aspect-ratio: 3/4;
+}
+
+/* Apply animation on hover */
+.ldr-cover:hover {
+    clip-path: circle(100% at center);
+    animation: circle 0.3s ease-in-out;
+}
+
+/* Overlay effect */
+.ldr-cover:hover .ldr-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 104, 133, 0.325));
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Description (Name & Position) */
+.ldr-desc {
+    /* position: absolute; */
+    bottom: 10px;
+    width: 100%;
+    bottom: -20px;
+    text-align: center;
+    color: rgb(37, 37, 37);
+    font-weight: bold;
+    /* padding: 32px 16px; */
+}
+
+/* Hover Effect */
+.ldr-cover:hover .ldr-image {
+    clip-path: none;
+    /* Shows full image */
+}
+
+.ldr-cover:hover .ldr-hover {
+    opacity: 1;
+    /* Overlay appears */
+}
+
+/* .ldr-cover:hover  {
+    filter: grayscale(80%)
+} */
+
+
+
+@media (max-width: 668px) {
+    .ldr {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+   
+}
+
+@media (max-width: 500px) {
+    .ldr {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
+@media (min-width: 768px) {
+    .ldr {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ldr-container {
+        padding: 32px 16px;
+    }
+}
+
+.connect{
+    animation: arise 0.3s ease-in-out;
+}
+
+@keyframes arise {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
