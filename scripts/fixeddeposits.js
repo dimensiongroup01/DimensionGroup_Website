@@ -67,14 +67,14 @@ let rateData = {
   },
   shriram: {
     cumulative: {
-      1: 7.35,
-      2: 7.53,
-      3: 7.78,
+      1: 7.00,
+      2: 7.15,
+      3: 7.25,
       4: "",
-      5: 8.66,
+      5: "",
       6: "",
       7: "",
-      8: 9.39,
+      8: 7.60,
     },
     nonCumulative: {
       1: "",
@@ -318,3 +318,4 @@ calculateInterest();
 
 calButton.addEventListener("click", calculateInterest);
 // sliderMonth.addEventListener("mouseleave", calculateInterest);
+
